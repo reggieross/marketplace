@@ -1,0 +1,31 @@
+@import "../../../assets/colors";
+
+.nav-root,
+.nav.nav-root {
+  display: flex;
+  min-height: 30px;
+  width: 100%;
+  align-items: center;
+  background: $burgandy;
+  position: relative;
+  z-index: 100;
+  transition: background 300ms, box-shadow 300ms;
+  box-shadow: antiquewhite 0 0 0;
+}
+
+.nav-root.nav-fixed {
+  position: fixed;
+  background: $burgandy;
+  box-shadow: antiquewhite 2px 8px 10px;
+}
+
+.nav-inner-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-link-container {
+  padding: 0 10px;
+  display: flex;
+}
+

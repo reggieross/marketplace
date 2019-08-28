@@ -1,0 +1,16 @@
+@import '../../../assets/colors';
+
+.footer-root {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $burgandy;
+  color: $white;
+}
+
+.footer-icon-section {
+  min-width: 60px;
+  display: flex;
+  justify-content: space-around;
+}
