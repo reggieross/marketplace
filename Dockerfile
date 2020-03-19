@@ -2,9 +2,8 @@
 FROM node:12-alpine as build-deps
 WORKDIR /usr/src/app
 ARG NPM_TOKEN
-COPY .npmrc .npmrc
-COPY package.json package.json
-RUN npm i
+COPY package*.json .npmrc babel.config.js tsconfig.json ./
+RUN npm install
 RUN rm -f .npmrc
 COPY . ./
 RUN npm run build

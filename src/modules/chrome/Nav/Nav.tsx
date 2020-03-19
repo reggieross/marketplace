@@ -42,9 +42,9 @@ export class Nav extends React.Component<NavProps, NavState> {
         )}>
         <div className={styles['nav-inner-container']}>
           <div className={styles['nav-link-container']}>
-            <NavLink selected={selectedId === 'products'} href={''}>Products</NavLink>
-            <NavLink selected={selectedId === 'new-arrivals'} href={''}>New Arrivals</NavLink>
-            <NavLink selected={selectedId === 'sale'} href={''}>Sale</NavLink>
+            <NavLink selected={selectedId === 'products'} href={'/products'}>Products</NavLink>
+            <NavLink selected={selectedId === 'new-arrivals'} href={'/products'}>New Arrivals</NavLink>
+            <NavLink selected={selectedId === 'sale'} href={'/products/sale'}>Sale</NavLink>
           </div>
 
           <div className={styles['nav-link-container']}>
