@@ -1,5 +1,5 @@
 import React from 'react';
-import Chrome from "../modules/chrome/Chrome";
+import Chrome from "../../modules/chrome/Chrome";
 import {Content, ArticleSection, Card, Row, Header} from "@rbross07/component-lib";
 
 export class Home extends React.Component<{}> {

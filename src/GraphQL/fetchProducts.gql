@@ -1,0 +1,11 @@
+# Returns actual meal periods filtered by checked dates & businuss(es)
+query fetchProducts(
+  $categoryIds: [String!]
+) {
+    getProducts(input: {categoryIds: $categoryIds}) {
+      products(input: {categoryIds: $categoryIds}) {
+          name,
+          id
+      }
+    }
+}

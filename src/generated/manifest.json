@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "operations": [
+    {
+      "signature": "965f4737a3fdb8fb80d6b5834999c7492f5aee2b72e637dd245c3902ed92f914",
+      "document": "query fetchProducts($categoryIds:[String!]){getProducts(input:{categoryIds:$categoryIds}){__typename products(input:{categoryIds:$categoryIds}){__typename id name}}}",
+      "metadata": {
+        "engineSignature": ""
+      }
+    }
+  ]
+}

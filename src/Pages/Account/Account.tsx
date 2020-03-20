@@ -1,7 +1,7 @@
 import React from 'react';
-import Chrome from "../modules/chrome/Chrome";
+import Chrome from "../../modules/chrome/Chrome";
 
-export class Product extends React.Component<{}> {
+export class Account extends React.Component<{}> {
   render() {
     return (
       <Chrome selectedId={'products'}>
