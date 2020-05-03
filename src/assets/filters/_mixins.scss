@@ -1,0 +1,7 @@
+@import 'src/assets/colors';
+
+@mixin filterContainer {
+  width: 200px;
+  border-right: 1px solid $white_50;
+  max-width: 200px;
+}

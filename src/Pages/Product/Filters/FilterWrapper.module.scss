@@ -1,0 +1,31 @@
+@import 'src/assets/filters/mixins';
+@import 'src/assets/colors';
+
+.root {
+  @include filterContainer;
+}
+
+.titleContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $white_50;
+    cursor: pointer;
+  }
+
+  &.open {
+    background: $white_50;
+  }
+}
+
+.filterContentContainer {
+  position: absolute;
+  height: 300px;
+  width: 98vw;
+  left: 0;
+  border-bottom: 1px solid $white_50;
+  background: $white_50;
+}

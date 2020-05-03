@@ -2,32 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/AuthenticationService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/HttpClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Category/Category.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/filters/_mixins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/CatalogService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CatalogService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/GQLClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GQLClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Chrome.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Footer/Footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Footer/footer.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/Account/accountLink.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/Account/accountLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/Nav.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/NavLink/NavLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/NavLink/navLink.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/ShoppingCart/ShoppingCartLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/ShoppingCart/shoppingCartLink.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/Nav/nav.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/chrome/chrome.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/dataTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/dataTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/_colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,15 +57,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Pages/Product/Filters" />
       <recent name="$PROJECT_DIR$/src/modules/chrome" />
       <recent name="$PROJECT_DIR$/src/modules" />
       <recent name="$PROJECT_DIR$/src/Pages/Home" />
       <recent name="$PROJECT_DIR$/src/Pages/Product" />
-      <recent name="$PROJECT_DIR$/src/Pages/Account" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -113,7 +99,7 @@
       <workItem from="1588369950944" duration="2185000" />
       <workItem from="1588464336411" duration="5000" />
       <workItem from="1588468009059" duration="12000" />
-      <workItem from="1588468520603" duration="5483000" />
+      <workItem from="1588468520603" duration="14451000" />
     </task>
     <servers />
   </component>
@@ -121,6 +107,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588515192369">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588515192369" />
     <state x="506" y="282" width="667" height="486" key="find.popup" timestamp="1588469268812">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
