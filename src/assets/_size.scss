@@ -1,0 +1,7 @@
+$default: 5px;
+$xsmall: $default;
+$small: calc(#{$default} * 2);
+$med: calc(#{$default} * 3);
+$large: calc(#{$default} * 4);
+$xlarge: calc(#{$default} * 5);
+$xxlarge: calc(#{$default} * 6);

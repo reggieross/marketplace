@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Category/Category.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/filters/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.storybook/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/_size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chip/Chip.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chip/Chip.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chip/Chip.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -58,14 +55,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Pages/components/Chip" />
       <recent name="$PROJECT_DIR$/src/Pages/Product/Filters" />
       <recent name="$PROJECT_DIR$/src/modules/chrome" />
       <recent name="$PROJECT_DIR$/src/modules" />
-      <recent name="$PROJECT_DIR$/src/Pages/Home" />
-      <recent name="$PROJECT_DIR$/src/Pages/Product" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -99,7 +97,7 @@
       <workItem from="1588369950944" duration="2185000" />
       <workItem from="1588464336411" duration="5000" />
       <workItem from="1588468009059" duration="12000" />
-      <workItem from="1588468520603" duration="14451000" />
+      <workItem from="1588468520603" duration="16971000" />
     </task>
     <servers />
   </component>
