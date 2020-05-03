@@ -1,7 +1,7 @@
-import {ApolloClient, DefaultOptions} from "apollo-client";
-import {createService, GqlService} from "../generated/serviceFactory";
-import {InMemoryCache} from "apollo-cache-inmemory";
-import { createHttpLink } from "apollo-link-http";
+import { ApolloClient, DefaultOptions } from 'apollo-client';
+import { createService, GqlService } from '../generated/serviceFactory';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { createHttpLink } from 'apollo-link-http';
 
 const defaultOptions: DefaultOptions = {
   query: {
@@ -10,7 +10,9 @@ const defaultOptions: DefaultOptions = {
 };
 
 const client = new ApolloClient({
-  link: createHttpLink({ uri: "https://marketplace-gateway.herokuapp.com/graphql" }),
+  link: createHttpLink({
+    uri: 'https://marketplace-gateway.herokuapp.com/graphql',
+  }),
   cache: new InMemoryCache(),
   defaultOptions,
 });

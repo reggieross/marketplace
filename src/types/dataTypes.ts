@@ -1,3 +1,10 @@
 export interface Product {
-  name: string
+  name: string;
+}
+
+export interface CreateAccountRequest {
+  name: string;
+  username: string;
+  password: string;
+  email: string;
 }
