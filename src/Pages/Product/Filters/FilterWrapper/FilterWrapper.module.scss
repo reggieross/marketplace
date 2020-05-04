@@ -1,5 +1,6 @@
 @import 'src/assets/filters/mixins';
 @import 'src/assets/colors';
+@import 'src/assets/breakPoints';
 
 .root {
   @include filterContainer;
@@ -28,4 +29,10 @@
   left: 0;
   border-bottom: 1px solid $white_50;
   background: $white_50;
+}
+
+@include mobile {
+  .filterContentContainer {
+    height: 85vh;
+  }
 }

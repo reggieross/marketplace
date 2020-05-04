@@ -5,7 +5,8 @@ import {fetchProducts_getProducts_products} from "../../generated/fetchProducts"
 const transform = (products: fetchProducts_getProducts_products[]): Product[] => {
   return products.reduce<Product[]>((acc, next) => {
     acc.push({
-      name: next.name || ''
+      name: next.name || '',
+      prices: []
     });
     return acc;
   }, []);

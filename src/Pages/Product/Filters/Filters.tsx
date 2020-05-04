@@ -1,31 +1,39 @@
 import React, { useCallback, useState } from 'react';
 import styles from './Filters.module.scss';
 import FilterListIcon from '@material-ui/icons/FilterList';
-import { Category } from './Category/Category';
+import ClearIcon from '@material-ui/icons/Clear';
+import { Brand } from './Brand/Brand';
+import classNames from 'classnames';
 
 export const Filters: React.FC<{}> = ({}) => {
   console.log('render');
   const [selectedId, setOpenContainerId] = useState<string>('');
   const onClose = () => setOpenContainerId('');
 
+  const isOpen = selectedId !== '';
   return (
     <div className={styles['root']}>
-      <div className={styles['filterIcon']}>
-        <FilterListIcon />
+      <div
+        className={classNames(styles['icon'], {
+          [styles['open']]: isOpen,
+        })}
+        onClick={isOpen ? onClose : undefined}
+      >
+        {isOpen ? <ClearIcon /> : <FilterListIcon />}
       </div>
-      <Category
-        id={'category'}
+      <Brand
+        id={'brand'}
         selectedId={selectedId}
         openContentForId={setOpenContainerId}
         onClose={onClose}
       />
-      <Category
+      <Brand
         id={'category-2'}
         selectedId={selectedId}
         openContentForId={setOpenContainerId}
         onClose={onClose}
       />
-      <Category
+      <Brand
         id={'category-3'}
         selectedId={selectedId}
         openContentForId={setOpenContainerId}

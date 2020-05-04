@@ -1,0 +1,52 @@
+@import 'src/assets/size';
+@import 'src/assets/breakPoints';
+
+.popularSection {
+  max-width: 30%;
+  border-right: 1px solid;
+
+  > p {
+    padding: 0 $med;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.brandSection {
+  padding: $small;
+}
+.popularSection,
+.brandSection {
+  padding: $small;
+  text-align: left;
+  overflow: scroll;
+  > p {
+    padding: 0 $med;
+  }
+}
+
+@include mobile {
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .popularSection {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid;
+    max-height: 300px;
+  }
+
+  .popularSection,
+  .brandSection {
+    overflow: visible;
+  }
+
+  .contentContainer {
+    overflow: scroll;
+  }
+}
