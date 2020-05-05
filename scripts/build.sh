@@ -1,0 +1,1 @@
+docker build -f Dockerfile . -t marketplace:latest --build-arg NPM_TOKEN=$NPM_TOKEN
