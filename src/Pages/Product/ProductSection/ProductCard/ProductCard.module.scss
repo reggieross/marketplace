@@ -1,0 +1,15 @@
+@import "src/assets/size";
+@import "src/assets/colors";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    color: $burgundy;
+  }
+
+  svg:hover {
+    cursor: pointer;
+  }
+}

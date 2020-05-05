@@ -4,6 +4,7 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 import ClearIcon from '@material-ui/icons/Clear';
 import { Brand } from './Brand/Brand';
 import classNames from 'classnames';
+import { Button } from '../../../components/Button/Button';
 
 export const Filters: React.FC<{}> = ({}) => {
   console.log('render');
@@ -39,6 +40,11 @@ export const Filters: React.FC<{}> = ({}) => {
         openContentForId={setOpenContainerId}
         onClose={onClose}
       />
+      <div>
+        <div className={styles['buttonContainer']}>
+          <Button ariaLabel={'apply-filter-button'}>Apply </Button>
+        </div>
+      </div>
     </div>
   );
 };

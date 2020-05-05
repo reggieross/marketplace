@@ -47,7 +47,7 @@
   flex-direction: column;
   justify-content: space-between;
   border-top: 1px solid $white_50;
-  min-height: 125px;
+  min-height: 200px;
   display: flex;
   text-align: left;
 }
@@ -65,7 +65,7 @@
 }
 
 .cardFooter {
-  border-top: 1px solid $white_50;
+  border-top: 1px solid $burgundy;
   padding: $small;
 }
 

@@ -2,26 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/_breakPoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Category/Category.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper/FilterWrapper.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper/FilterWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/transformers/ProductTransformer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/transformers/ProductTransformer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chip/Chip.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chip/Chip.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/globalTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/globalTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/dataTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/dataTypes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +103,7 @@
       <workItem from="1588369950944" duration="2185000" />
       <workItem from="1588464336411" duration="5000" />
       <workItem from="1588468009059" duration="12000" />
-      <workItem from="1588468520603" duration="26182000" />
+      <workItem from="1588468520603" duration="30220000" />
     </task>
     <servers />
   </component>

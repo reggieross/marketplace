@@ -1,6 +1,7 @@
 export interface Product {
   name: string;
   prices: Price[]
+  isLiked?: boolean;
 }
 
 export interface Price {

@@ -1,0 +1,24 @@
+@import "src/assets/colors";
+@import "src/assets/size";
+
+.root {
+  background: $burgundy;
+  color: $white;
+  border: none;
+  height: 40px;
+  padding: $small;
+  border-radius: 4px;
+}
+
+.root:hover {
+  cursor: pointer;
+}
+
+.root:focus {
+  outline: none;
+}
+
+.root.filled {
+  background: $white;
+  border: 1px solid $burgundy;
+}

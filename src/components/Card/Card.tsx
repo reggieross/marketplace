@@ -5,14 +5,15 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 export const Card: React.FC<{
   footer?: ReactElement;
   href?: string;
+  onImageClick?: () => void;
   imgURL?: string;
   subHeader?: ReactElement;
   title: string;
-}> = ({ href, imgURL, title, subHeader, footer }) => {
+}> = ({ onImageClick, href, imgURL, title, subHeader, footer }) => {
   return (
     <div className={styles['root']}>
       <figure className={styles['imageContainer']}>
-        <a href={href}>
+        <a href={href} onClick={onImageClick}>
           <div
             className={styles['image']}
             style={{

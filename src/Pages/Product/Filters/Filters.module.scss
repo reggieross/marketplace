@@ -1,9 +1,10 @@
 @import 'src/assets/colors';
+@import 'src/assets/size';
 
 .root {
   position: sticky;
   top: 50px;
-  min-height: 35px;
+  min-height: 50px;
   width: 100%;
   border-bottom: 1px solid $white_50;
   justify-content: flex-start;
@@ -28,4 +29,12 @@
 
 .icon.open:hover {
   cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: $xsmall $small;
+  height: 100%;
+  box-sizing: border-box;
 }

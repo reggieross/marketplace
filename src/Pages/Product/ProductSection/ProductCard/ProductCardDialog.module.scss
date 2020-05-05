@@ -1,0 +1,13 @@
+@import 'src/assets/colors';
+@import 'src/assets/size';
+
+.root {
+  .appBar {
+    background-color: $burgundy;
+    position: relative;
+  }
+
+  .title {
+    margin-left: $large;
+  }
+}
