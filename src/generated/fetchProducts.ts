@@ -3,25 +3,28 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
+import { PaginationInput } from "./globalTypes";
+
 // ====================================================
 // GraphQL query operation: fetchProducts
 // ====================================================
 
-export interface fetchProducts_getProducts_products {
+export interface fetchProducts_catalog_products {
   __typename: "Product";
   name: string | null;
   id: string | null;
 }
 
-export interface fetchProducts_getProducts {
+export interface fetchProducts_catalog {
   __typename: "ProductResponse";
-  products: fetchProducts_getProducts_products[];
+  products: fetchProducts_catalog_products[];
 }
 
 export interface fetchProducts {
-  getProducts: fetchProducts_getProducts;
+  catalog: fetchProducts_catalog;
 }
 
 export interface fetchProductsVariables {
-  categoryIds?: string[] | null;
+  brandIds?: string[] | null;
+  pageInfo?: PaginationInput | null;
 }

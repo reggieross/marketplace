@@ -4,6 +4,11 @@ export interface Product {
   isLiked?: boolean;
 }
 
+export interface Brand {
+  name: string;
+  id: string
+}
+
 export interface Price {
   price: number;
   url: string;

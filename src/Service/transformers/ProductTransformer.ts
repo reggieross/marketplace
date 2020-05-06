@@ -1,8 +1,8 @@
 import {Product} from "../../types/dataTypes";
-import {fetchProducts_getProducts_products} from "../../generated/fetchProducts";
+import {fetchProducts_catalog_products} from "../../generated/fetchProducts";
 
 
-const transform = (products: fetchProducts_getProducts_products[]): Product[] => {
+const transform = (products: fetchProducts_catalog_products[]): Product[] => {
   return products.reduce<Product[]>((acc, next) => {
     acc.push({
       name: next.name || '',

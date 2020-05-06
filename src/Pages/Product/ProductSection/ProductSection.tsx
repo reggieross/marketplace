@@ -12,6 +12,8 @@ export const ProductSection: React.FC<{}> = React.memo(({}) => {
     });
   }, []);
 
+  console.log(products.length)
+
   return (
     <div className={styles['root']}>
       {products.map(product => (

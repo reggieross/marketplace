@@ -1,0 +1,10 @@
+query fetchFilters {
+  catalog {
+    filters {
+      brand {
+        name
+        id
+      }
+    }
+  }
+}

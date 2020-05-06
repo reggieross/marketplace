@@ -5,8 +5,10 @@ import ClearIcon from '@material-ui/icons/Clear';
 import { Brand } from './Brand/Brand';
 import classNames from 'classnames';
 import { Button } from '../../../components/Button/Button';
+import { Brand as IBrand } from '../../../types/dataTypes';
+import CatalogService from '../../../Service/CatalogService';
 
-export const Filters: React.FC<{}> = ({}) => {
+export const Filters: React.FC<{}> = React.memo(({}) => {
   console.log('render');
   const [selectedId, setOpenContainerId] = useState<string>('');
   const onClose = () => setOpenContainerId('');
@@ -28,18 +30,6 @@ export const Filters: React.FC<{}> = ({}) => {
         openContentForId={setOpenContainerId}
         onClose={onClose}
       />
-      <Brand
-        id={'category-2'}
-        selectedId={selectedId}
-        openContentForId={setOpenContainerId}
-        onClose={onClose}
-      />
-      <Brand
-        id={'category-3'}
-        selectedId={selectedId}
-        openContentForId={setOpenContainerId}
-        onClose={onClose}
-      />
       <div>
         <div className={styles['buttonContainer']}>
           <Button ariaLabel={'apply-filter-button'}>Apply </Button>
@@ -47,4 +37,4 @@ export const Filters: React.FC<{}> = ({}) => {
       </div>
     </div>
   );
-};
+});

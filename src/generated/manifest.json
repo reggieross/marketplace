@@ -2,8 +2,15 @@
   "version": 2,
   "operations": [
     {
-      "signature": "965f4737a3fdb8fb80d6b5834999c7492f5aee2b72e637dd245c3902ed92f914",
-      "document": "query fetchProducts($categoryIds:[String!]){getProducts(input:{categoryIds:$categoryIds}){__typename products(input:{categoryIds:$categoryIds}){__typename id name}}}",
+      "signature": "dd4884c85ee4fcdf64af59d8955bc62621aac0c35d7f27cea705c419ed7715a8",
+      "document": "query fetchFilters{catalog{__typename filters{__typename brand{__typename id name}}}}",
+      "metadata": {
+        "engineSignature": ""
+      }
+    },
+    {
+      "signature": "90c2bed241ac3128d39b0d7c75f437d0e1b873ba62700240da44119da6515bcf",
+      "document": "query fetchProducts($brandIds:[String!],$pageInfo:PaginationInput){catalog{__typename products(input:{pageInfo:$pageInfo,filters:{brandIds:$brandIds}}){__typename id name}}}",
       "metadata": {
         "engineSignature": ""
       }

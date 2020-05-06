@@ -7,8 +7,17 @@
 // START Enums and Input Objects
 //==============================================================
 
+export enum LIMIT {
+  FIFTY = "FIFTY",
+  FIVE_HUNDRED = "FIVE_HUNDRED",
+  ONE_HUNDRED = "ONE_HUNDRED",
+}
+
+export interface PaginationInput {
+  limit: LIMIT;
+  page: number;
+}
+
 //==============================================================
 // END Enums and Input Objects
 //==============================================================
-
-export {}
