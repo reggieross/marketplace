@@ -8,7 +8,7 @@ const transform = (brands: fetchFilters_catalog_filters_brand[]): Brand[] => {
       id: next.id || '',
     });
     return acc;
-  }, []);
+  }, []).sort(((a, b) => a.name.localeCompare(b.name)));
 };
 
 export const BrandTransformer = {

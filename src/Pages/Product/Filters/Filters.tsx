@@ -5,11 +5,8 @@ import ClearIcon from '@material-ui/icons/Clear';
 import { Brand } from './Brand/Brand';
 import classNames from 'classnames';
 import { Button } from '../../../components/Button/Button';
-import { Brand as IBrand } from '../../../types/dataTypes';
-import CatalogService from '../../../Service/CatalogService';
 
 export const Filters: React.FC<{}> = React.memo(({}) => {
-  console.log('render');
   const [selectedId, setOpenContainerId] = useState<string>('');
   const onClose = () => setOpenContainerId('');
 

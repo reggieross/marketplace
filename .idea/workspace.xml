@@ -4,11 +4,15 @@
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/PageSelection/PageSelection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/CatalogService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CatalogService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/transformers/BrandTransformer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/transformers/BrandTransformer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.tsx" afterDir="false" />
     </list>
@@ -124,7 +128,7 @@
       <workItem from="1588698031184" duration="56000" />
       <workItem from="1588698103776" duration="13683000" />
       <workItem from="1589055861766" duration="337000" />
-      <workItem from="1589251468185" duration="1330000" />
+      <workItem from="1589251468185" duration="3258000" />
     </task>
     <servers />
   </component>
@@ -159,9 +163,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="506" y="282" width="667" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1588628628898" />
-    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1585421316620">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1589301810189">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1589301810189" />
     <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1585421316620" />
     <state x="570" y="424" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588470226821">
       <screen x="0" y="0" width="1680" height="1050" />

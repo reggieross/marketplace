@@ -29,6 +29,18 @@
   }
 }
 
+.search {
+  display: flex;
+  max-width: 250px;
+  align-items: center;
+  border-bottom: 1px solid;
+  margin: 20px;
+
+  .searchIcon {
+    margin-right: 10px;
+  }
+}
+
 @include mobile {
   .contentContainer {
     flex-direction: column;

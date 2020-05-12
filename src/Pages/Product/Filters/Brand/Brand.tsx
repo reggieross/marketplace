@@ -4,6 +4,9 @@ import { Chip } from '../../../../components/Chip/Chip';
 import styles from './Brand.module.scss';
 import { Brand as IBrand } from '../../../../types/dataTypes';
 import CatalogService from '../../../../Service/CatalogService';
+import { InputBase } from '@material-ui/core';
+import { SearchOutlined } from '@material-ui/icons';
+import { debounce } from 'lodash';
 
 export const Brand: React.FC<{
   id: string;
@@ -12,30 +15,44 @@ export const Brand: React.FC<{
   onClose: () => void;
 }> = React.memo(({ id, openContentForId, selectedId, onClose }) => {
   const [brands, setBrands] = React.useState<IBrand[]>([]);
+  const [search, setSearch] = React.useState<string | undefined>(undefined);
+
   React.useEffect(() => {
     CatalogService.fetchFilters().then(res => {
       setBrands(res);
     });
   }, []);
 
+  const filteredItems = React.useMemo(() => {
+    if (!search) {
+      return brands;
+    }
+    return brands.filter(brand => brand.name.includes(search));
+  }, [search, brands]);
+
+  const onSearch = React.useCallback(
+    debounce((event: any) => {
+      console.log(event);
+    }, 300),
+    []
+  );
+
   const content = (
-    <div className={styles['contentContainer']}>
-      <div className={styles['popularSection']}>
-        <p>Popular</p>
-        <Chip name={'some-brand'} />
-        <Chip name={'some-brand'} />
-        <Chip name={'some-brand'} />
-        <Chip name={'some-brand'} />
-        <Chip name={'some-brand'} />
-        <Chip name={'some-brand'} />
-        <Chip name={'some-brand'} />
+    <div className={styles['brandSection']}>
+      <div className={styles['search']}>
+        <div className={styles['searchIcon']}>
+          <SearchOutlined />
+        </div>
+        <InputBase
+          id={'brand-search'}
+          onInput={onSearch}
+          placeholder="Search…"
+          inputProps={{ 'aria-label': 'search' }}
+        />
       </div>
-      <div className={styles['brandSection']}>
-        <p>Brands</p>
-        {brands.map(brand => (
-          <Chip name={brand.name} key={brand.id} />
-        ))}
-      </div>
+      {filteredItems.map(brand => (
+        <Chip name={brand.name} key={brand.id} />
+      ))}
     </div>
   );
   return (
