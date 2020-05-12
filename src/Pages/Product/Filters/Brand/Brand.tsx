@@ -17,25 +17,43 @@ export const Brand: React.FC<{
   const [brands, setBrands] = React.useState<IBrand[]>([]);
   const [search, setSearch] = React.useState<string | undefined>(undefined);
 
+  const clearSearch = () => {
+    setSearch(undefined);
+  };
+
   React.useEffect(() => {
     CatalogService.fetchFilters().then(res => {
       setBrands(res);
     });
   }, []);
 
+  React.useEffect(() => {
+    if (selectedId !== id) {
+      clearSearch();
+    }
+  }, [selectedId]);
+
   const filteredItems = React.useMemo(() => {
     if (!search) {
       return brands;
     }
-    return brands.filter(brand => brand.name.includes(search));
+    return brands.filter(brand =>
+      brand.name.toLocaleLowerCase().includes(search)
+    );
   }, [search, brands]);
 
-  const onSearch = React.useCallback(
-    debounce((event: any) => {
-      console.log(event);
-    }, 300),
-    []
-  );
+  const onSearch = debounce((input: string) => {
+    console.log(input);
+    if (!input || input.length === 0) {
+      clearSearch();
+    } else {
+      setSearch(input);
+    }
+  }, 300);
+
+  const onChange = React.useCallback((event: any) => {
+    onSearch(event.target.value);
+  }, []);
 
   const content = (
     <div className={styles['brandSection']}>
@@ -45,9 +63,10 @@ export const Brand: React.FC<{
         </div>
         <InputBase
           id={'brand-search'}
-          onInput={onSearch}
+          onChange={onChange}
           placeholder="Search…"
           inputProps={{ 'aria-label': 'search' }}
+          inputComponent={'input'}
         />
       </div>
       {filteredItems.map(brand => (
