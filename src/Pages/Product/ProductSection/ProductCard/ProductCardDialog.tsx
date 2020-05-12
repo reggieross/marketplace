@@ -11,19 +11,26 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import { Product } from '../../../../types/dataTypes';
+import { Slide } from '@material-ui/core';
+import { TransitionProps } from '@material-ui/core/transitions';
+
+const Transition = React.forwardRef<unknown, TransitionProps>((props, ref) => (
+  //@ts-ignore
+  <Slide direction="up" ref={ref} {...props} />
+));
 
 export const ProductCardDialog: React.FC<{
   product: Product;
   open: boolean;
   handleClose: () => void;
 }> = React.memo(({ product, open, handleClose }) => {
-
   return (
     <Dialog
       className={styles['root']}
       fullScreen
       open={open}
       onClose={handleClose}
+      TransitionComponent={Transition}
     >
       <AppBar className={styles['appBar']}>
         <Toolbar>

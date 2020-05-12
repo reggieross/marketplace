@@ -2,17 +2,22 @@ import React from 'react';
 import { Product } from '../../../types/dataTypes';
 import CatalogService from '../../../Service/CatalogService';
 import { ProductCard } from './ProductCard/ProductCard';
-import styles from './ProductSection.module.scss'
+import styles from './ProductSection.module.scss';
+import { LIMIT } from '../../../generated/globalTypes';
 
 export const ProductSection: React.FC<{}> = React.memo(({}) => {
   const [products, setProducts] = React.useState<Product[]>([]);
+  const [page, setPage] = React.useState<number>(1);
   React.useEffect(() => {
-    CatalogService.fetchProducts().then(res => {
+    CatalogService.fetchProducts(undefined, {
+      page,
+      limit: LIMIT.FIFTY,
+    }).then(res => {
       setProducts(res);
     });
   }, []);
 
-  console.log(products.length)
+  console.log(products.length);
 
   return (
     <div className={styles['root']}>

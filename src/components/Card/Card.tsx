@@ -5,31 +5,26 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 export const Card: React.FC<{
   footer?: ReactElement;
   href?: string;
-  onImageClick?: () => void;
+  onCardClick?: () => void;
   imgURL?: string;
   subHeader?: ReactElement;
   title: string;
-}> = ({ onImageClick, href, imgURL, title, subHeader, footer }) => {
+}> = ({ onCardClick, href, imgURL, title, subHeader, footer }) => {
   return (
-    <div className={styles['root']}>
+    <div className={styles['root']} onClick={onCardClick}>
       <figure className={styles['imageContainer']}>
-        <a href={href} onClick={onImageClick}>
-          <div
-            className={styles['image']}
-            style={{
-              backgroundImage:
-                'url(https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_706,w_470/c_scale,h_280/f_auto,dpr_2.0/201404M202014_1/versace-red-biggie-sunglasses-hoodie.jpg)',
-            }}
-          />
-          <div className={styles['overlay']}>
-            <ExitToAppIcon />
-          </div>
-        </a>
+        <div
+          className={styles['image']}
+          style={{
+            backgroundImage:
+              'url(https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_706,w_470/c_scale,h_280/f_auto,dpr_2.0/201404M202014_1/versace-red-biggie-sunglasses-hoodie.jpg)',
+          }}
+        />
       </figure>
       <div className={styles['textContainer']}>
         <div className={styles['titleContainer']}>
-          <h4>{title}</h4>
-          <div>{subHeader}</div>
+          <h3>{title}</h3>
+          {subHeader}
         </div>
         <div className={styles['cardFooter']}>{footer}</div>
       </div>

@@ -2,18 +2,6 @@
 @import 'src/assets/colors';
 @import 'src/assets/breakPoints';
 
-.overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: $overlay_50;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 10px 20px;
-  box-sizing: border-box;
-}
-
 .imageContainer {
   min-height: 200px;
   margin: 0;
@@ -24,22 +12,6 @@
     height: 100%;
     position: absolute;
     background-size: cover;
-  }
-
-  .overlay {
-    opacity: 0;
-    transition: opacity ease 0.3s;
-
-    svg {
-      color: $white;
-    }
-  }
-}
-
-.imageContainer:hover {
-  .overlay {
-    opacity: 1;
-    cursor: pointer;
   }
 }
 
@@ -62,6 +34,16 @@
   box-sizing: border-box;
   box-shadow: $overlay_30 5px 15px 20px;
   border-radius: 0 0 5px 5px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+.root:hover {
+  cursor: pointer;
+  top: -5px;
+  left: -5px;
 }
 
 .cardFooter {
@@ -71,8 +53,9 @@
 
 .titleContainer {
   padding: $small;
+  flex: 1;
 
-  h4 {
+  h3 {
     margin: $small 0;
   }
 }

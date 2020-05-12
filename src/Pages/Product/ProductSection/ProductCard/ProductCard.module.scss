@@ -1,5 +1,5 @@
-@import "src/assets/size";
-@import "src/assets/colors";
+@import 'src/assets/size';
+@import 'src/assets/colors';
 
 .footer {
   display: flex;
@@ -11,5 +11,11 @@
 
   svg:hover {
     cursor: pointer;
+  }
+}
+
+.subHeader {
+  h4 {
+    margin-top: $small;
   }
 }
