@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/clients/AnalyticsClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ComponentDecorators/withClickTrack.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ComponentDecorators/withPageVisitTracking.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -118,7 +123,9 @@
       <workItem from="1588698031184" duration="56000" />
       <workItem from="1588698103776" duration="13683000" />
       <workItem from="1589055861766" duration="337000" />
-      <workItem from="1589251468185" duration="5215000" />
+      <workItem from="1589251468185" duration="8021000" />
+      <workItem from="1592090274764" duration="144000" />
+      <workItem from="1594606350449" duration="2679000" />
     </task>
     <servers />
   </component>
@@ -133,10 +140,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588782531391" />
-    <state x="581" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588794352558">
+    <state x="581" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594610538377">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="581" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1588794352558" />
+    <state x="581" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1594610538377" />
     <state x="349" y="164" key="SettingsEditor" timestamp="1588698086035">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -145,10 +152,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588515192369" />
-    <state x="519" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1589251469139">
+    <state x="519" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1594606352146">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="519" y="357" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1589251469139" />
+    <state x="519" y="357" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1594606352146" />
     <state x="506" y="282" width="667" height="486" key="find.popup" timestamp="1588628628898">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -158,7 +165,6 @@
     </state>
     <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1589313639169" />
     <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.23.1680.947@0.23.1680.947" timestamp="1589313633941" />
-    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1585421316620" />
     <state x="570" y="424" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588470226821">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

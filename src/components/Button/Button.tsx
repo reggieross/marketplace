@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Button.module.scss';
 import classNames from 'classnames';
+import {withClickTrack} from "../ComponentDecorators/withClickTrack";
 
 export const Button: React.FC<{
   onClick?: () => void;
@@ -20,3 +21,6 @@ export const Button: React.FC<{
     );
   }
 );
+
+export const TrackingButton = withClickTrack(Button)
+
