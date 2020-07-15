@@ -29,7 +29,7 @@ export const Filters: React.FC<{}> = React.memo(({}) => {
       />
       <div>
         <div className={styles['buttonContainer']}>
-          <Button clickEventName={''} ariaLabel={'apply-filter-button'}>Apply </Button>
+          <Button ariaLabel={'apply-filter-button'}>Apply </Button>
         </div>
       </div>
     </div>
