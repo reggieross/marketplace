@@ -1,11 +1,12 @@
 /* tslint:disable */
 // This file was automatically generated and should not be edited.
-import ApolloClient, { QueryOptions, ApolloQueryResult, ObservableQuery } from 'apollo-client';
+import ApolloClient, { QueryOptions, ApolloQueryResult, ObservableQuery, MutationOptions } from 'apollo-client';
 import gql from 'graphql-tag';
 import { FetchResult } from "apollo-link";
 
 import { fetchFilters } from './fetchFilters'
 import { fetchProducts, fetchProductsVariables } from './fetchProducts'
+import { likeProduct, likeProductVariables } from './likeProduct'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -18,6 +19,8 @@ export interface GqlService {
     watchfetchProducts: (variables: fetchProductsVariables, options?: Omit<QueryOptions<fetchProductsVariables>, 'query' | 'variables'>) => ObservableQuery<fetchProducts, fetchProductsVariables>;
 
   
+    likeProduct: (variables: likeProductVariables, options?: Omit<MutationOptions<likeProduct, likeProductVariables>, 'mutation' | 'variables'>) => Promise<FetchResult<likeProduct>>;
+
 }
 
 export function createService(client: ApolloClient<any>) : GqlService {
@@ -53,7 +56,15 @@ export function createService(client: ApolloClient<any>) : GqlService {
       });
     },
 
-      
+    
+    likeProduct: (variables: likeProductVariables, options: Omit<MutationOptions<likeProduct, likeProductVariables>, 'mutation' | 'variables'> = {}) => {
+      return client.mutate<likeProduct, likeProductVariables>({
+        ...options,
+        mutation: likeProductMutation,
+        variables
+      });
+    },
+  
   }
 }
 
@@ -61,3 +72,5 @@ export function createService(client: ApolloClient<any>) : GqlService {
   export const fetchFiltersQuery = gql`query fetchFilters{catalog{__typename filters{__typename brand{__typename id name}}}}`
   
   export const fetchProductsQuery = gql`query fetchProducts($brandIds:[String!],$pageInfo:PaginationInput){catalog{__typename products(input:{pageInfo:$pageInfo,filters:{brandIds:$brandIds}}){__typename id name}}}`
+  
+  export const likeProductMutation = gql`mutation likeProduct($liked:Boolean!,$productId:String!){catalog{__typename likeProduct(input:{productId:$productId,liked:$liked}){__typename success}}}`

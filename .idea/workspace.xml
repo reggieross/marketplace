@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GraphQL/likeProduct.gql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/buildIt.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/buildIt.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sendIt.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sendIt.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/AuthenticationService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CatalogService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CatalogService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/GQLClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GQLClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/transformers/ProductTransformer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/transformers/ProductTransformer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/serviceFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/serviceFactory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/dataTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/dataTypes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +72,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -80,10 +86,6 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$" />
@@ -91,6 +93,92 @@
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Pages/components/Chip" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Product Card.Price Modal">
+    <configuration name="Product Card" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
+      <test-names>
+        <test-name value="Product Card" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Product Card.Price Modal" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
+      <test-names>
+        <test-name value="Product Card" />
+        <test-name value="Price Modal" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Product Card.Price Modal.Should display modal when user click on card" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
+      <test-names>
+        <test-name value="Product Card" />
+        <test-name value="Price Modal" />
+        <test-name value="Should display modal when user click on card" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Product Card.Should Submit a request to like product when a user click the like product button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
+      <test-names>
+        <test-name value="Product Card" />
+        <test-name value="Should Submit a request to like product when a user click the like product button" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Product Card.Should submit and unlike request if user clicks the unlike product button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
+      <test-names>
+        <test-name value="Product Card" />
+        <test-name value="Should submit and unlike request if user clicks the unlike product button" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Product Card.Price Modal" />
+        <item itemvalue="Jest.Product Card.Price Modal.Should display modal when user click on card" />
+        <item itemvalue="Jest.Product Card" />
+        <item itemvalue="Jest.Product Card.Should submit and unlike request if user clicks the unlike product button" />
+        <item itemvalue="Jest.Product Card.Should Submit a request to like product when a user click the like product button" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -131,7 +219,15 @@
       <workItem from="1589251468185" duration="8021000" />
       <workItem from="1592090274764" duration="144000" />
       <workItem from="1594606350449" duration="18723000" />
-      <workItem from="1594766129041" duration="9316000" />
+      <workItem from="1594766129041" duration="9842000" />
+      <workItem from="1594823386545" duration="3810000" />
+      <workItem from="1595019954559" duration="546000" />
+      <workItem from="1595020947592" duration="795000" />
+      <workItem from="1595087770941" duration="1027000" />
+      <workItem from="1595091890254" duration="4182000" />
+      <workItem from="1595690115792" duration="1905000" />
+      <workItem from="1595773447359" duration="1499000" />
+      <workItem from="1595775588485" duration="3265000" />
     </task>
     <servers />
   </component>
@@ -154,6 +250,22 @@
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1594744097989" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1595778857020">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857020" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1595778857018">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857017" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1595778857016">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857016" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1595778857019">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857019" />
     <state x="349" y="164" key="SettingsEditor" timestamp="1588698086035">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

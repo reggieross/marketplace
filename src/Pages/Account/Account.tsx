@@ -1,15 +1,18 @@
 import React from 'react';
 import { Product } from '../../types/dataTypes';
-import { StandardPage } from '@rbross07/component-lib';
+import { AuthenticatedPage } from '@rbross07/component-lib';
 
 interface AccountPageProps {
-    products: Product[];
+  products: Product[];
 }
 
 export const AccountPage: React.FC<{}> = React.memo(() => {
-    return (
-        <StandardPage pageId={'account'}>
-
-        </StandardPage>
-    );
+  const onUnauthenticated = () => {
+    window.location.href = '/';
+  };
+  return (
+    <AuthenticatedPage onUnauthenticated={onUnauthenticated} pageId={'account'}>
+      <div>Account Info</div>
+    </AuthenticatedPage>
+  );
 });

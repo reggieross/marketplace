@@ -1,0 +1,7 @@
+mutation likeProduct($productId: String!, $liked: Boolean!) {
+  catalog {
+    likeProduct(input: { productId: $productId, liked: $liked }) {
+      success
+    }
+  }
+}

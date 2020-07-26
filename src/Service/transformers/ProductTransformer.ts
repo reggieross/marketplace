@@ -1,18 +1,17 @@
-import {Product} from "../../types/dataTypes";
-import {fetchProducts_catalog_products} from "../../generated/fetchProducts";
-
+import { Product } from '../../types/dataTypes';
+import { fetchProducts_catalog_products } from '../../generated/fetchProducts';
 
 const transform = (products: fetchProducts_catalog_products[]): Product[] => {
   return products.reduce<Product[]>((acc, next) => {
     acc.push({
+      id: next.id || '',
       name: next.name || '',
-      prices: []
+      prices: [],
     });
     return acc;
   }, []);
 };
 
-
 export const ProductTransformer = {
-  transform
+  transform,
 };

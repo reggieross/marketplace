@@ -26,6 +26,7 @@ export const ProductCardDialog: React.FC<{
 }> = React.memo(({ product, open, handleClose }) => {
   return (
     <Dialog
+      aria-labelledby={'price-aggregate-dialogue'}
       className={styles['root']}
       fullScreen
       open={open}

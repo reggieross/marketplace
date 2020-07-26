@@ -14,6 +14,13 @@
       "metadata": {
         "engineSignature": ""
       }
+    },
+    {
+      "signature": "8b41b46e37ec421d83342f5090d3727d714aba41d0af25b966030994dc10b4da",
+      "document": "mutation likeProduct($liked:Boolean!,$productId:String!){catalog{__typename likeProduct(input:{productId:$productId,liked:$liked}){__typename success}}}",
+      "metadata": {
+        "engineSignature": ""
+      }
     }
   ]
 }

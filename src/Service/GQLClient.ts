@@ -11,7 +11,8 @@ const defaultOptions: DefaultOptions = {
 
 const client = new ApolloClient({
   link: createHttpLink({
-    uri: 'https://marketplace-gateway.herokuapp.com/graphql',
+    uri: '/gql-gateway/graphql',
+    credentials: 'include',
   }),
   cache: new InMemoryCache(),
   defaultOptions,
@@ -19,7 +20,7 @@ const client = new ApolloClient({
 
 let gqlService: GqlService;
 
-export const getGQLService = (): GqlService => {
+export const getGQLClient = (): GqlService => {
   if (!gqlService) {
     gqlService = createService(client);
   }
