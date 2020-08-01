@@ -1,6 +1,6 @@
 import React from 'react';
 import { Product } from '../../types/dataTypes';
-import { StandardPage } from '@rbross07/component-lib';
+import { StandardPage } from '@rross_llc/component-lib';
 import { Filters } from './Filters/Filters';
 import { ProductSection } from './ProductSection/ProductSection';
 

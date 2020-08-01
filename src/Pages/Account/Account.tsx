@@ -1,6 +1,6 @@
 import React from 'react';
 import { Product } from '../../types/dataTypes';
-import { AuthenticatedPage } from '@rbross07/component-lib';
+import { AuthenticatedPage } from '@rross_llc/component-lib';
 
 interface AccountPageProps {
   products: Product[];

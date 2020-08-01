@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './App.module.scss';
-import '@rbross07/component-lib/dist/css/main.css';
+import '@rross_llc/component-lib/dist/css/main.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ProductPage } from './Pages/Product/Product';
 import { FourOhFour } from './Pages/FourOhFour';

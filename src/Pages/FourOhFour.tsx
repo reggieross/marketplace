@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StandardPage } from '@rbross07/component-lib';
+import { StandardPage } from '@rross_llc/component-lib';
 
 export class FourOhFour extends React.Component<{}> {
   render() {

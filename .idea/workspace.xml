@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
@@ -212,7 +215,7 @@
       <workItem from="1595690115792" duration="1905000" />
       <workItem from="1595773447359" duration="1499000" />
       <workItem from="1595775588485" duration="3810000" />
-      <workItem from="1596321836953" duration="2229000" />
+      <workItem from="1596321836953" duration="2742000" />
     </task>
     <servers />
   </component>
@@ -255,10 +258,11 @@
     </state>
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1595856277650" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941511" />
-    <state x="349" y="164" key="SettingsEditor" timestamp="1588698086035">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="2079" y="169" key="SettingsEditor" timestamp="1596324885626">
+      <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="349" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1588698086035" />
+    <state x="2079" y="169" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596324885626" />
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588515192369">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -272,12 +276,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="506" y="282" width="667" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1588628628898" />
-    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup" timestamp="1594683822516">
+    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup" timestamp="1596325022893">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1589313639169" />
     <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.23.1680.947@0.23.1680.947" timestamp="1589313633941" />
-    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1594683822516" />
+    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596325022893" />
     <state x="570" y="424" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588470226821">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
