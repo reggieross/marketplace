@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GraphQL/likeProduct.gql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/CatalogService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CatalogService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/GQLClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GQLClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/transformers/ProductTransformer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/transformers/ProductTransformer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/serviceFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/serviceFactory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/dataTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/dataTypes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +211,8 @@
       <workItem from="1595091890254" duration="4182000" />
       <workItem from="1595690115792" duration="1905000" />
       <workItem from="1595773447359" duration="1499000" />
-      <workItem from="1595775588485" duration="3265000" />
+      <workItem from="1595775588485" duration="3810000" />
+      <workItem from="1596321836953" duration="2229000" />
     </task>
     <servers />
   </component>
@@ -250,22 +235,26 @@
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1594744097989" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1595778857020">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1595856277651">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857020" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1595778857018">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1595856277651" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941512" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1595856277648">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857017" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1595778857016">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1595856277648" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941509" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1595856277647">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857016" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1595778857019">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1595856277647" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941507" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1595856277650">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778857019" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1595856277650" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941511" />
     <state x="349" y="164" key="SettingsEditor" timestamp="1588698086035">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -274,10 +263,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588515192369" />
-    <state x="519" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1594606352146">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="2319" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1596322029065">
+      <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="357" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1594606352146" />
+    <state x="2319" y="371" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596322029065" />
     <state x="506" y="282" width="667" height="486" key="find.popup" timestamp="1588628628898">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
