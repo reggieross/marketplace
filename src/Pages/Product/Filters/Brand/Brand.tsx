@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { FilterWrapper } from '../FilterWrapper/FilterWrapper';
 import { Chip } from '../../../../components/Chip/Chip';
 import styles from './Brand.module.scss';
@@ -31,6 +31,7 @@ export const Brand: React.FC<{
     if (selectedId !== id) {
       clearSearch();
     }
+    // eslint-disable-next-line
   }, [selectedId]);
 
   const filteredItems = React.useMemo(() => {
@@ -53,6 +54,7 @@ export const Brand: React.FC<{
 
   const onChange = React.useCallback((event: any) => {
     onSearch(event.target.value);
+    // eslint-disable-next-line
   }, []);
 
   const content = (

@@ -5,9 +5,9 @@ import { ProductCard } from './ProductCard/ProductCard';
 import styles from './ProductSection.module.scss';
 import { LIMIT } from '../../../generated/globalTypes';
 
-export const ProductSection: React.FC<{}> = React.memo(({}) => {
+export const ProductSection: React.FC = React.memo(() => {
   const [products, setProducts] = React.useState<Product[]>([]);
-  const [page, setPage] = React.useState<number>(1);
+  const [page] = React.useState<number>(1);
   React.useEffect(() => {
     CatalogService.fetchProducts(undefined, {
       page,
@@ -15,6 +15,7 @@ export const ProductSection: React.FC<{}> = React.memo(({}) => {
     }).then(res => {
       setProducts(res);
     });
+    // eslint-disable-next-line
   }, []);
 
   console.log(products.length);

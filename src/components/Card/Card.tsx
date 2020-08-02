@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import styles from './Card.module.scss';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 export const Card: React.FC<{
   footer?: ReactElement;

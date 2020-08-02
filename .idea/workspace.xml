@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ComponentDecorators/withClickTrack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ComponentDecorators/withClickTrack.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +63,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -215,7 +220,7 @@
       <workItem from="1595690115792" duration="1905000" />
       <workItem from="1595773447359" duration="1499000" />
       <workItem from="1595775588485" duration="3810000" />
-      <workItem from="1596321836953" duration="2742000" />
+      <workItem from="1596321836953" duration="3816000" />
     </task>
     <servers />
   </component>
@@ -226,6 +231,10 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2240" y="205" key="#ESLint" timestamp="1596326189517">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2240" y="205" key="#ESLint/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596326189517" />
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588782531391">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -276,12 +285,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="506" y="282" width="667" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1588628628898" />
-    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup" timestamp="1596325022893">
+    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup" timestamp="1596326425454">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1589313639169" />
     <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.23.1680.947@0.23.1680.947" timestamp="1589313633941" />
-    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596325022893" />
+    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596326425454" />
     <state x="570" y="424" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588470226821">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

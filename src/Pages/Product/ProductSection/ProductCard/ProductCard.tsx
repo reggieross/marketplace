@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Card } from '../../../../components/Card/Card';
 import { Product } from '../../../../types/dataTypes';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';

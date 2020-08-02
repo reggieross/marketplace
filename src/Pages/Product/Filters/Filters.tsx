@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Filters.module.scss';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import ClearIcon from '@material-ui/icons/Clear';
@@ -6,7 +6,7 @@ import { Brand } from './Brand/Brand';
 import classNames from 'classnames';
 import { Button } from '../../../components/Button/Button';
 
-export const Filters: React.FC<{}> = React.memo(({}) => {
+export const Filters: React.FC = React.memo(() => {
   const [selectedId, setOpenContainerId] = useState<string>('');
   const onClose = () => setOpenContainerId('');
 
