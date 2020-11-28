@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/setupHeroku.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HttpClient.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/dataTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/dataTypes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +46,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/reggieross/marketplace.git" />
+      </set>
+    </option>
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -56,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,7 +83,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
@@ -86,7 +101,37 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Product Card.Price Modal">
+  <component name="RunManager" selected="Jest.Http Client.Get .Should use return the body of the response">
+    <configuration name="Http Client.Get .Should use fetch with the correct props" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Service/HttpClient.spec.ts" />
+      <test-names>
+        <test-name value="Http Client" />
+        <test-name value="Get " />
+        <test-name value="Should use fetch with the correct props" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Http Client.Get .Should use return the body of the response" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Service/HttpClient.spec.ts" />
+      <test-names>
+        <test-name value="Http Client" />
+        <test-name value="Get " />
+        <test-name value="Should use return the body of the response" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Product Card" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -129,41 +174,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Product Card.Should Submit a request to like product when a user click the like product button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
-      <test-names>
-        <test-name value="Product Card" />
-        <test-name value="Should Submit a request to like product when a user click the like product button" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Product Card.Should submit and unlike request if user clicks the unlike product button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
-      <test-names>
-        <test-name value="Product Card" />
-        <test-name value="Should submit and unlike request if user clicks the unlike product button" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Http Client.Get .Should use return the body of the response" />
+        <item itemvalue="Jest.Http Client.Get .Should use fetch with the correct props" />
         <item itemvalue="Jest.Product Card.Price Modal" />
         <item itemvalue="Jest.Product Card.Price Modal.Should display modal when user click on card" />
         <item itemvalue="Jest.Product Card" />
-        <item itemvalue="Jest.Product Card.Should submit and unlike request if user clicks the unlike product button" />
-        <item itemvalue="Jest.Product Card.Should Submit a request to like product when a user click the like product button" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +232,10 @@
       <workItem from="1595690115792" duration="1905000" />
       <workItem from="1595773447359" duration="1499000" />
       <workItem from="1595775588485" duration="3810000" />
-      <workItem from="1596321836953" duration="4671000" />
+      <workItem from="1596321836953" duration="7887000" />
+      <workItem from="1598749773817" duration="6544000" />
+      <workItem from="1600642681188" duration="28000" />
+      <workItem from="1606577160826" duration="1079000" />
     </task>
     <servers />
   </component>
@@ -225,70 +245,65 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2240" y="205" key="#ESLint" timestamp="1596326189517">
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1606578237409">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2240" y="205" key="#ESLint/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596326189517" />
-    <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588782531391">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588782531391" />
-    <state x="581" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594610538377">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="581" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1594610538377" />
-    <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594744097989">
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237409" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1606578237407">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1594744097989" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1595856277651">
-      <screen x="0" y="23" width="1680" height="952" />
-    </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1595856277651" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941512" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1595856277648">
-      <screen x="0" y="23" width="1680" height="952" />
-    </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1595856277648" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941509" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1595856277647">
-      <screen x="0" y="23" width="1680" height="952" />
-    </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1595856277647" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941507" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1595856277650">
-      <screen x="0" y="23" width="1680" height="952" />
-    </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1595856277650" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1595778941511" />
-    <state x="2079" y="169" key="SettingsEditor" timestamp="1596324885626">
+    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237407" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1606578237406">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="349" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1588698086035" />
-    <state x="2079" y="169" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596324885626" />
-    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588515192369">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588515192369" />
-    <state x="2319" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1596322029065">
+    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237406" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1606578237408">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="519" y="357" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1594606352146" />
-    <state x="2319" y="371" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596322029065" />
-    <state x="506" y="282" width="667" height="486" key="find.popup" timestamp="1588628628898">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="506" y="282" width="667" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1588628628898" />
-    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup" timestamp="1596326425454">
+    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237408" />
+    <state x="2079" y="169" key="SettingsEditor" timestamp="1598750346988">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1589313639169" />
-    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.23.1680.947@0.23.1680.947" timestamp="1589313633941" />
-    <state x="2305" y="241" width="766" height="677" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1596326425454" />
-    <state x="570" y="424" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1588470226821">
+    <state x="2079" y="169" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1598750346988" />
+    <state x="519" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1606577160818">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="570" y="424" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1588470226821" />
+    <state x="519" y="357" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606577160818" />
+    <state x="2305" y="241" key="search.everywhere.popup" timestamp="1606578209509">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2305" y="241" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578209509" />
   </component>
 </project>

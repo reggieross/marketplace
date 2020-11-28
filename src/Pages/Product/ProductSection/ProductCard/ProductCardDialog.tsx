@@ -24,6 +24,14 @@ export const ProductCardDialog: React.FC<{
   open: boolean;
   handleClose: () => void;
 }> = React.memo(({ product, open, handleClose }) => {
+  const items = product.prices.map((price, index) => {
+    console.log(price);
+    return (
+      <ListItem button key={index}>
+        <ListItemText primary={price.amount} secondary={price.site} />
+      </ListItem>
+    );
+  });
   return (
     <Dialog
       aria-labelledby={'price-aggregate-dialogue'}
@@ -49,13 +57,8 @@ export const ProductCardDialog: React.FC<{
         </Toolbar>
       </AppBar>
       <List>
-        <ListItem button>
-          <ListItemText primary="Price 1" secondary="Website 1" />
-        </ListItem>
         <Divider />
-        <ListItem button>
-          <ListItemText primary="Price 2" secondary="Website 2" />
-        </ListItem>
+        {items}
       </List>
     </Dialog>
   );

@@ -8,8 +8,7 @@ interface ProductPageProps {
   products: Product[];
 }
 
-export const ProductPage: React.FC<{}> = React.memo(() => {
-  console.log(process.env.REACT_APP_AUTHENTICATION_URL);
+export const ProductPage: React.FC = React.memo(() => {
   return (
     <StandardPage pageId={'products'}>
       <Filters />

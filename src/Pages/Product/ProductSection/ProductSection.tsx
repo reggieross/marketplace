@@ -13,17 +13,15 @@ export const ProductSection: React.FC = React.memo(() => {
       page,
       limit: LIMIT.FIFTY,
     }).then(res => {
+      console.log(res);
       setProducts(res);
     });
-    // eslint-disable-next-line
   }, []);
-
-  console.log(products.length);
 
   return (
     <div className={styles['root']}>
       {products.map(product => (
-        <ProductCard key={product.name} product={product} />
+        <ProductCard key={`${product.name}_${product.id}`} product={product} />
       ))}
     </div>
   );

@@ -11,7 +11,7 @@ export interface Brand {
 }
 
 export interface Price {
-  price: number;
+  amount: number;
   url: string;
   site: string;
   currency?: string;

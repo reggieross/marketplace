@@ -39,7 +39,7 @@ export const ProductCard: React.FC<{ product: Product }> = React.memo(
     const subHeader = (
       <div className={styles['subHeader']}>
         <h4>Brand</h4>
-        <div>Found on 3 sites</div>
+        <div>{product.prices.length > 1 ?  `Found on ${product.prices.length} sites` : 'Found on 1 site'}</div>
       </div>
     );
     const footer = (
