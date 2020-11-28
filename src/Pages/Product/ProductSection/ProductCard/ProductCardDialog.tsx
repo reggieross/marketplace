@@ -25,9 +25,8 @@ export const ProductCardDialog: React.FC<{
   handleClose: () => void;
 }> = React.memo(({ product, open, handleClose }) => {
   const items = product.prices.map((price, index) => {
-    console.log(price);
     return (
-      <ListItem button key={index}>
+      <ListItem onClick={() => window.open(price.url)} button key={index}>
         <ListItemText primary={price.amount} secondary={price.site} />
       </ListItem>
     );

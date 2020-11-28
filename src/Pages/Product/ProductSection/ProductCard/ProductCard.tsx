@@ -7,8 +7,8 @@ import styles from './ProductCard.module.scss';
 import { ProductCardDialog } from './ProductCardDialog';
 import CatalogService from '../../../../Service/CatalogService';
 
-export const ProductCard: React.FC<{ product: Product }> = React.memo(
-  ({ product }) => {
+export const ProductCard: React.FC<{ product: Product, showLikeIcon?: boolean }> = React.memo(
+  ({ product, showLikeIcon = false }) => {
     const [dialogOpen, setDialogOpen] = React.useState(false);
     const [isLiked, setIsLiked] = React.useState(product.isLiked || false);
     const handleClickOpen = () => {
@@ -39,13 +39,17 @@ export const ProductCard: React.FC<{ product: Product }> = React.memo(
     const subHeader = (
       <div className={styles['subHeader']}>
         <h4>Brand</h4>
-        <div>{product.prices.length > 1 ?  `Found on ${product.prices.length} sites` : 'Found on 1 site'}</div>
+        <div>
+          {product.prices.length > 1
+            ? `Found on ${product.prices.length} sites`
+            : 'Found on 1 site'}
+        </div>
       </div>
     );
     const footer = (
       <div className={styles['footer']}>
-        <span>Lowest price </span>
-        {likeIcon}
+        <span>{product.prices[0].amount} </span>
+        {showLikeIcon && likeIcon}
       </div>
     );
     return (

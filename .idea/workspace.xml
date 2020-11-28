@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/setupHeroku.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HttpClient.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/dataTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/dataTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/_breakPoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/_breakPoints.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,20 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Http Client.Get .Should use return the body of the response">
+  <component name="RunManager" selected="Jest.Http Client">
+    <configuration name="Http Client" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/Service/HttpClient.spec.ts" />
+      <test-names>
+        <test-name value="Http Client" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Http Client.Get .Should use fetch with the correct props" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -129,19 +136,6 @@
         <test-name value="Http Client" />
         <test-name value="Get " />
         <test-name value="Should use return the body of the response" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Product Card" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" />
-      <test-names>
-        <test-name value="Product Card" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -176,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Http Client" />
         <item itemvalue="Jest.Http Client.Get .Should use return the body of the response" />
         <item itemvalue="Jest.Http Client.Get .Should use fetch with the correct props" />
         <item itemvalue="Jest.Product Card.Price Modal" />
         <item itemvalue="Jest.Product Card.Price Modal.Should display modal when user click on card" />
-        <item itemvalue="Jest.Product Card" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +229,7 @@
       <workItem from="1596321836953" duration="7887000" />
       <workItem from="1598749773817" duration="6544000" />
       <workItem from="1600642681188" duration="28000" />
-      <workItem from="1606577160826" duration="1079000" />
+      <workItem from="1606577160826" duration="4596000" />
     </task>
     <servers />
   </component>
@@ -277,22 +271,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1606578237409">
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1606578253788">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237409" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1606578237407">
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253788" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1606578253785">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237407" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1606578237406">
+    <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253785" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1606578253784">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237406" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1606578237408">
+    <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253784" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1606578253787">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578237408" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253787" />
     <state x="2079" y="169" key="SettingsEditor" timestamp="1598750346988">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
@@ -301,9 +295,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="519" y="357" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606577160818" />
-    <state x="2305" y="241" key="search.everywhere.popup" timestamp="1606578209509">
+    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1606582285553">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2305" y="241" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578209509" />
+    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606582285553" />
   </component>
 </project>

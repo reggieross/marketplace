@@ -9,8 +9,8 @@
       }
     },
     {
-      "signature": "90c2bed241ac3128d39b0d7c75f437d0e1b873ba62700240da44119da6515bcf",
-      "document": "query fetchProducts($brandIds:[String!],$pageInfo:PaginationInput){catalog{__typename products(input:{pageInfo:$pageInfo,filters:{brandIds:$brandIds}}){__typename id name}}}",
+      "signature": "0c80960f41fbafc056e9203767b8ec8886e633238b4df93dfe966058be5e172f",
+      "document": "query fetchProducts($brandIds:[String!],$pageInfo:PaginationInput){catalog{__typename products(input:{pageInfo:$pageInfo,filters:{brandIds:$brandIds}}){Price{__typename amount currency site url}__typename id name}}}",
       "metadata": {
         "engineSignature": ""
       }

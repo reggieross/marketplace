@@ -3,6 +3,12 @@ query fetchProducts($brandIds: [String!], $pageInfo: PaginationInput) {
     products(input: { pageInfo: $pageInfo, filters: { brandIds: $brandIds } }) {
       name
       id
+      Price {
+        amount
+        url
+        currency
+        site
+      }
     }
   }
 }

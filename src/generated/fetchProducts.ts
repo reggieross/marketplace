@@ -9,10 +9,19 @@ import { PaginationInput } from "./globalTypes";
 // GraphQL query operation: fetchProducts
 // ====================================================
 
+export interface fetchProducts_catalog_products_Price {
+  __typename: "Price";
+  amount: string | null;
+  url: string | null;
+  currency: string | null;
+  site: string | null;
+}
+
 export interface fetchProducts_catalog_products {
   __typename: "Product";
   name: string | null;
   id: string | null;
+  Price: fetchProducts_catalog_products_Price[];
 }
 
 export interface fetchProducts_catalog {

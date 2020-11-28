@@ -71,6 +71,6 @@ export function createService(client: ApolloClient<any>) : GqlService {
 
   export const fetchFiltersQuery = gql`query fetchFilters{catalog{__typename filters{__typename brand{__typename id name}}}}`
   
-  export const fetchProductsQuery = gql`query fetchProducts($brandIds:[String!],$pageInfo:PaginationInput){catalog{__typename products(input:{pageInfo:$pageInfo,filters:{brandIds:$brandIds}}){__typename id name}}}`
+  export const fetchProductsQuery = gql`query fetchProducts($brandIds:[String!],$pageInfo:PaginationInput){catalog{__typename products(input:{pageInfo:$pageInfo,filters:{brandIds:$brandIds}}){Price{__typename amount currency site url}__typename id name}}}`
   
   export const likeProductMutation = gql`mutation likeProduct($liked:Boolean!,$productId:String!){catalog{__typename likeProduct(input:{productId:$productId,liked:$liked}){__typename success}}}`
