@@ -1,0 +1,57 @@
+@import 'src/assets/size';
+@import 'src/assets/colors';
+
+.login-content {
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  input {
+    margin-bottom: $large;
+    height: 50px;
+  }
+}
+
+.root {
+  .error,
+  .title,
+  .button {
+    color: $burgundy;
+  }
+
+  .error {
+    margin-bottom: 10px;
+  }
+
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 20px $burgundy_30;
+    height: 50vh;
+    width: 25%;
+  }
+
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.password-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    cursor: pointer;
+  }
+}

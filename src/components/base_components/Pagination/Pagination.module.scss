@@ -1,0 +1,31 @@
+.root {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navigation-arrows,
+.page {
+  cursor: pointer;
+
+}
+
+.page {
+  min-width: 30px;
+}
+
+.navigation-arrows:first-of-type {
+  margin-right: 30px;
+}
+
+.navigation-arrows:last-of-type {
+  margin-left: 30px;
+}
+
+.page.active {
+  color: red;
+}
+
+.navigation-arrows.disabled {
+  color: gray;
+}

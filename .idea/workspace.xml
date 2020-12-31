@@ -2,10 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90a6c6f2-4674-486d-b654-d27d0b37bb4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Service/AuthenticationService.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/AuthenticationService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/service.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base_components/Pagination/Pagination.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base_components/Pagination/Pagination.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base_components/Pagination/Pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base_components/TextInput/TextInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/modules/LoginForm/LoginForm.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/modules/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Login/Login.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Login/Login.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Login/Login.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Login/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/CookieMonster.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/CookieMonster.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/_breakPoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/_breakPoints.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Account/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Account/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/FourOhFour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/FourOhFour.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Filters/Brand/Brand.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Brand/Brand.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Filters/Brand/Brand.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper/FilterWrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Filters/FilterWrapper/FilterWrapper.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper/FilterWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Filters/FilterWrapper/FilterWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Filters/Filters.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Filters/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductCard/ProductCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductCard/ProductCard.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductCard/ProductCardDialog.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductCard/ProductCardDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductSection.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/ProductSection/ProductSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Product/ProductSection/ProductSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/HttpClient.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HttpService.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/HttpClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HttpService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Card/Card.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Card/Card.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Card/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chip/Chip.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Chip/Chip.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chip/Chip.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Chip/Chip.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chip/Chip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/Chip/Chip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ComponentDecorators/withClickTrack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/ComponentDecorators/withClickTrack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ComponentDecorators/withPageVisitTracking.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base_components/ComponentDecorators/withPageVisitTracking.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +109,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/modules/LoginForm" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,16 +127,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/base" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Pages/Product/Filters/FilterWrapper" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Pages/components/Chip" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/modules/LoginForm" />
+      <recent name="$PROJECT_DIR$/src/util" />
+      <recent name="$PROJECT_DIR$/src/Service" />
+      <recent name="$PROJECT_DIR$/src/components/pages" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.Http Client">
@@ -229,7 +275,9 @@
       <workItem from="1596321836953" duration="7887000" />
       <workItem from="1598749773817" duration="6544000" />
       <workItem from="1600642681188" duration="28000" />
-      <workItem from="1606577160826" duration="4596000" />
+      <workItem from="1606577160826" duration="7997000" />
+      <workItem from="1607788150502" duration="6444000" />
+      <workItem from="1609428562145" duration="2717000" />
     </task>
     <servers />
   </component>
@@ -271,33 +319,34 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1606578253788">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1607392211020">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1607392211020" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253788" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1606578253785">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1607392211018">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1607392211018" />
     <state width="1878" height="304" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253785" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1606578253784">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1607392211015">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1607392211015" />
     <state width="1878" height="304" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253784" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1606578253787">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1607392211019">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1607392211019" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606578253787" />
-    <state x="2079" y="169" key="SettingsEditor" timestamp="1598750346988">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2079" y="169" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1598750346988" />
     <state x="519" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1606577160818">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="519" y="357" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1606577160818" />
-    <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1606582285553">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1609429508735">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1609429508735" />
     <state x="2305" y="241" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1606582285553" />
   </component>
 </project>
