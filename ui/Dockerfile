@@ -5,9 +5,9 @@ ARG NPM_TOKEN
 COPY package*.json .npmrc babel.config.js tsconfig.json nginx.conf ./
 RUN npm install
 RUN rm -f .npmrc
-COPY ./src ./src
-COPY ./public ./public
-COPY ./scripts ./scripts
+COPY src ./src
+COPY public ./public
+COPY ../ci ./scripts
 RUN npm run build
 
 # Stage 2 - the production environment

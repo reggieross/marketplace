@@ -20,6 +20,10 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "./src",
+    "../shared/src"
+  ],
+  "exclude": [
+    "./node_modules"
   ]
 }

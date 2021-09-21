@@ -5,9 +5,8 @@ import {
   ResponseType,
 } from '../../../Service/AuthenticationService';
 import { LoginForm } from '../../modules/LoginForm/LoginForm';
-import { LocationState } from 'history';
 
-export const Login: React.FC<{ history: LocationState }> = ({ history }) => {
+export const Login: React.FC<{ history: any }> = ({ history }) => {
   const { push } = history;
   const [submitting, setSubmitting] = React.useState(false);
   const [error, setErrorMessage] = React.useState<string | undefined>();

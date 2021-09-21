@@ -8,7 +8,7 @@ module.exports = function(app) {
       '^/authentication-service/': '/',
     },
     router: {
-      'localhost:3000': 'https://marketplace-auth.herokuapp.com',
+      'localhost:3000': 'localhost:3001/auth',
     },
   };
   app.use('/authentication-service/', createProxyMiddleware(options));
@@ -20,7 +20,7 @@ module.exports = function(app) {
       '^/gql-gateway/': '/',
     },
     router: {
-      'localhost:3000': 'https://marketplace-gateway.herokuapp.com',
+      'localhost:3000': 'localhost:3001/gateway',
     },
   };
   app.use('/gql-gateway/', createProxyMiddleware(gqlOption));
