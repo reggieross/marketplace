@@ -20,7 +20,7 @@ module.exports = function(app) {
       '^/gql-gateway/': '/',
     },
     router: {
-      'localhost:3000': 'localhost:3001/gateway',
+      'localhost:3000': 'localhost:3001/graphql',
     },
   };
   app.use('/gql-gateway/', createProxyMiddleware(gqlOption));

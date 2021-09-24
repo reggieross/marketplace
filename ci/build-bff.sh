@@ -1,26 +1,21 @@
 echo "Starting UI BUILD"
 
 getChangedFiles() {
-  git diff --name-only --diff-filter=AMDRT --cached | grep -q ui
-}
-
-hasUIChanged() {
-  getChangedFiles | grep -q ui
+  git diff --name-only --diff-filter=AMDRT --cached
 }
 
 hasBFFChanged() {
   getChangedFiles | grep -q bff
 }
 
-buildUI=hasUIChanged
+haveSharedFilesChanged() {
+  getChangedFiles | grep -q shared
+}
+
 buildBFF=hasBFFChanged
 
-if [ $buildUI ]
+if [ $buildBFF ]
 then
-  echo "start expensive operation"
-fi
-
-if [ $buildUI ]
-then
-  echo "start expensive operation"
+  cd ./bff || exit
+  npm run build
 fi

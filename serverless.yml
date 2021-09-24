@@ -1,0 +1,35 @@
+service: marketplace
+
+plugins:
+  - serverless-pseudo-parameters
+  - serverless-cloudformation-sub-variables
+  - serverless-s3-sync
+  - serverless-build-client
+
+custom:
+  siteName: ${self:service}-ui-${opt:stage}
+  s3Sync:
+    - bucketName: ${self:custom.siteName}
+      localDir: ui/build
+  buildClient:
+    packager: npm
+    command: run build
+    verbose: true
+
+provider:
+  name: aws
+  region: us-east-2
+  stage: ${opt:stage, 'dev'}
+  environment:
+    REACT_APP_JWT_PRIVATE_KEY: ${self:custom.cognito-client-id}
+    REGION: ${self:provider.region}
+    ENVIRONMENT: ${self:provider.stage}
+    STAGE: ${self:provider.stage}
+  stackTags:
+    Environment: ${self:provider.stage}
+    Project: marketplace
+    ServiceName: ${self:service}
+
+resources:
+  - ${file(./cf/s3.yml)}
+  - ${file(./cf/cloudfront.yml)}
