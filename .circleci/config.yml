@@ -16,6 +16,7 @@ jobs:
       - run: cat > ~/repo/ci/new-env-vars
       - run: ~/repo/ci/check_for_changes.sh
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
+      - run: git diff --name-only --diff-filter=AMDRT --cached
       - persist_to_workspace:
           root: ~/repo
           paths: .
@@ -25,11 +26,12 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+      - run: echo $BUILD_ALL
       - when:
           condition:
             and: # All must be true to trigger
-              - equal: [ $BUILD_ALL, 0 ]
-              - or: [ $BUILD_UI, 0 ]
+              - equal: [ $BUILD_ALL, true ]
+              - or: [ $BUILD_UI, true ]
           steps:
             - node/install-npm
             - restore_cache:
@@ -50,11 +52,13 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+      - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
+      - run: echo $BUILD_ALL
       - when:
           condition:
             and: # All must be true to trigger
-              - equal: [ $BUILD_ALL, 0 ]
-              - or: [ $BUILD_BFF, 0 ]
+              - equal: [ $BUILD_ALL, true ]
+              - or: [ $BUILD_BFF, true ]
           steps:
             - checkout
             - node/install-npm
