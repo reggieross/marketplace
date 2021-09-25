@@ -16,12 +16,22 @@ custom:
     command: run build
     verbose: true
 
+functions:
+  bff:
+    handler: .bff/build/lambda.handler
+    memorySize: 4096
+    environment:
+      HELLO_WORLD: "YO"
+    package:
+      patterns:
+        - ./bff/build/**
+    condition: DeployBFF
+
 provider:
   name: aws
   region: us-east-2
   stage: ${opt:stage, 'dev'}
   environment:
-    REACT_APP_JWT_PRIVATE_KEY: ${self:custom.cognito-client-id}
     REGION: ${self:provider.region}
     ENVIRONMENT: ${self:provider.stage}
     STAGE: ${self:provider.stage}
@@ -31,5 +41,15 @@ provider:
     ServiceName: ${self:service}
 
 resources:
+  - Conditions:
+      BuildAll: !Equals
+        - "${env:BUILD_ALL, false}"
+        - "true"
+      BuildBFF: !Equals
+        - "${env:BUILD_BFF, false}"
+        - "true"
+      DeployBFF: !Or
+        - !Condition BuildAll
+        - !Condition BuildBFF
   - ${file(./cf/s3.yml)}
   - ${file(./cf/cloudfront.yml)}

@@ -1,2 +1,1 @@
-cd ./bff || exit
-npm run unit:test
+echo "Running BFF unit Tests"

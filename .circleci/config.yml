@@ -21,135 +21,172 @@ jobs:
           root: ~/repo
           paths: .
 
-  install_ui_deps:
+  install_module_deps:
     <<: *defaults
+    parameters:
+      module:
+        type: string
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: echo $BUILD_ALL
-      - when:
-          condition:
-            and: # All must be true to trigger
-              - equal: [ $BUILD_ALL, true ]
-              - or: [ $BUILD_UI, true ]
-          steps:
-            - node/install-npm
-            - restore_cache:
-                keys:
-                  - v1-dependencies-{{ checksum "package.json" }}
-                  - v1-dependencies-
-            - run: cd ./ui && npm install
-            - save_cache:
-                paths:
-                  - node_modules
-                key: v1-dependencies-{{ checksum "package.json" }}
-            - persist_to_workspace:
-                root: ~/repo
-                paths: .
+      - node/install-npm
+      - restore_cache:
+          keys:
+            - << parameters.module >>-dependencies-{{ checksum "package.json" }}
+            - << parameters.module >>-dependencies-
+      - run: cd ./<< parameters.module >> && npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: << parameters.module >>-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: ~/repo
+          paths: ./<< parameters.module >>/node_modules
 
-  install_bff_deps:
+  build:
+    parameters:
+      module:
+        type: string
+    environment:
+      SCRIPT_ROOT: ./ci/<< parameters.module >>/build.sh
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/repo
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
-      - run: echo $BUILD_ALL
-      - when:
-          condition:
-            and: # All must be true to trigger
-              - equal: [ $BUILD_ALL, true ]
-              - or: [ $BUILD_BFF, true ]
-          steps:
-            - checkout
-            - node/install-npm
-            - restore_cache:
-                keys:
-                  - v1-dependencies-{{ checksum "package.json" }}
-                  - v1-dependencies-
-            - run: cd ./bff && npm install
-            - save_cache:
-                paths:
-                  - node_modules
-                key: v1-dependencies-{{ checksum "package.json" }}
-            - persist_to_workspace:
-                root: ~/repo
-                paths: .
-#
-#  build-bff:
-#    <<: *defaults
-#    steps:
-#      - attach_workspace:
-#          at: ~/repo
-#      - when:
-#          and: # All must be true to trigger
-#            - equal: [ $BUILD_ALL, 0 ]
-#            - or: [ $BUILD_BFF, 0 ]
-#      - run: ./ci/bff/build.sh
-#      - persist_to_workspace:
-#          root: ~/repo
-#          paths: .
-#
-#  build-ui:
-#    <<: *defaults
-#    steps:
-#      - attach_workspace:
-#          at: ~/repo
-#      - run: ./ci/ui/build.sh
-#      - persist_to_workspace:
-#          root: ~/repo
-#          paths: .
-#
-#  unit-test:
-#    <<: *defaults
-#    steps:
-#      - attach_workspace:
-#          at: ~/repo
-#      - run: ./unit-test.sh
-#
-#  e2e-test:
-#    <<: *defaults
-#    steps:
-#      - attach_workspace:
-#          at: ~/repo
-#      - run: ./e2e-unit-test.sh
+      - run: mkdir  ./<< parameters.module >>/build
+      - run: $SCRIPT_ROOT
+      - persist_to_workspace:
+          root: ~/repo
+          paths: ./<< parameters.module >>/build
+
+  unit-test:
+    parameters:
+      module:
+        type: string
+    environment:
+      SCRIPT_ROOT: ./ci/<< parameters.module >>/unit-test.sh
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
+      - run: $SCRIPT_ROOT
+
+  e2e-test:
+    parameters:
+      module:
+        type: string
+    environment:
+      SCRIPT_ROOT: ./ci/<< parameters.module >>/e2e-test.sh
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
+      - run: $SCRIPT_ROOT
+
+  deploy:
+    executor: aws-cli/default
+    parameters:
+      stage:
+        default: dev
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+      - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
+      - aws-cli/setup:
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-region: AWS_REGION
+      - run: npm i
+      - run: aws configure set region $AWS_DEFAULT_REGION --profile deployment
+      - run: aws configure set profile.deployment.role_arn "$DEPLOYMENT_ROLE_ARN"
+      - run: aws configure set profile.deployment.source_profile default
+      - run:
+          name: Get the correct params for deployment and deploy
+          command: |
+            params=( --stage << parameters.stage >> --aws-profile deployment)
+            [[ $BUILD_BFF == true ]] && params+=(--nos3sync)
+            npx serverless deploy "${params[@]}"
 
 workflows:
   version: 2
 
 
-  build_test_deploy-ui:
+  build_test_deploy:
     jobs:
       - check_changes
-      - install_ui_deps:
+      - install_module_deps:
+          name: "Install: BFF"
+          module: bff
           requires:
             - check_changes
-      - install_bff_deps:
+      - install_module_deps:
+          name: "Install: UI"
+          module: ui
           requires:
             - check_changes
-#      - ui-unit-test:
-#          requires:
-#            - check_changes
-#            - install_ui_deps
-#      - bff-unit-test:
-#          requires:
-#            - check_changes
-#            - install_bff_deps
-#      - bff-e2e-test:
-#          requires:
-#            - check_changes
-#            - install_bff_deps
-#      - bff-integration-test:
-#          requires:
-#            - check_changes
-#            - install_bff_deps
-#      - deploy:
-#          stage: dev
-#          context: org_ui
-#          filters:
-#            branches:
-#              only:
-#                - develop
-#          requires:
-#            - install_deps
-#            - integration-test
-#            - unit-test
+      - build:
+          name: "Build: BFF"
+          module: bff
+          requires:
+            - "Install: BFF"
+      - build:
+          name: "Build: UI"
+          module: ui
+          requires:
+            - "Install: UI"
+      - unit-test:
+          name: "Test: UI UNIT"
+          module: ui
+          requires:
+            - "Build: UI"
+      - unit-test:
+          name: "Test: BFF UNIT"
+          module: bff
+          requires:
+            - "Build: BFF"
+      - e2e-test:
+          name: "Test: BFF E2E"
+          module: bff
+          requires:
+            - "Build: BFF"
+      - deploy:
+          stage: dev
+          name: "Deploy: DEV"
+          context: org_ui
+          filters:
+            branches:
+              only:
+                - develop
+          requires:
+            - "Test: BFF UNIT"
+            - "Test: BFF E2E"
+            - "Test: UI UNIT"
+      - deploy:
+          stage: prod
+          name: "Deploy: PROD"
+          context: org_ui
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - "Test: BFF UNIT"
+            - "Test: BFF E2E"
+            - "Test: UI UNIT"
+      - deploy:
+          stage: qa
+          name: "Deploy: QA"
+          context: org_ui
+          filters:
+            branches:
+              only:
+                - release/*
+          requires:
+            - "Test: BFF UNIT"
+            - "Test: BFF E2E"
+            - "Test: UI UNIT"

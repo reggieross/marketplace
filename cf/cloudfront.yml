@@ -43,7 +43,7 @@ Resources:
             S3OriginConfig:
               OriginAccessIdentity: 'origin-access-identity/cloudfront/#{CloudFrontOriginAccessIdentity}'
         PriceClass: 'PriceClass_100'
-Outputs
+Outputs:
   DistributionId:
     Description: 'CloudFront Distribution ID'
     Value: !Ref CloudFrontDistribution
