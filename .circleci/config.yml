@@ -1,0 +1,151 @@
+version: 2.1
+defaults: &defaults
+  working_directory: ~/repo
+  executor:
+    name: node/default
+
+orbs:
+  node: circleci/node@3.0.0
+  aws-cli: circleci/aws-cli@1.4.0
+
+jobs:
+  check_changes:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: cat > ~/repo/ci/new-env-vars
+      - run: ~/repo/ci/check_for_changes.sh
+      - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  install_ui_deps:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - when:
+          condition:
+            and: # All must be true to trigger
+              - equal: [ $BUILD_ALL, 0 ]
+              - or: [ $BUILD_UI, 0 ]
+          steps:
+            - node/install-npm
+            - restore_cache:
+                keys:
+                  - v1-dependencies-{{ checksum "package.json" }}
+                  - v1-dependencies-
+            - run: cd ./ui && npm install
+            - save_cache:
+                paths:
+                  - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
+            - persist_to_workspace:
+                root: ~/repo
+                paths: .
+
+  install_bff_deps:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - when:
+          condition:
+            and: # All must be true to trigger
+              - equal: [ $BUILD_ALL, 0 ]
+              - or: [ $BUILD_BFF, 0 ]
+          steps:
+            - checkout
+            - node/install-npm
+            - restore_cache:
+                keys:
+                  - v1-dependencies-{{ checksum "package.json" }}
+                  - v1-dependencies-
+            - run: cd ./bff && npm install
+            - save_cache:
+                paths:
+                  - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
+            - persist_to_workspace:
+                root: ~/repo
+                paths: .
+#
+#  build-bff:
+#    <<: *defaults
+#    steps:
+#      - attach_workspace:
+#          at: ~/repo
+#      - when:
+#          and: # All must be true to trigger
+#            - equal: [ $BUILD_ALL, 0 ]
+#            - or: [ $BUILD_BFF, 0 ]
+#      - run: ./ci/bff/build.sh
+#      - persist_to_workspace:
+#          root: ~/repo
+#          paths: .
+#
+#  build-ui:
+#    <<: *defaults
+#    steps:
+#      - attach_workspace:
+#          at: ~/repo
+#      - run: ./ci/ui/build.sh
+#      - persist_to_workspace:
+#          root: ~/repo
+#          paths: .
+#
+#  unit-test:
+#    <<: *defaults
+#    steps:
+#      - attach_workspace:
+#          at: ~/repo
+#      - run: ./unit-test.sh
+#
+#  e2e-test:
+#    <<: *defaults
+#    steps:
+#      - attach_workspace:
+#          at: ~/repo
+#      - run: ./e2e-unit-test.sh
+
+workflows:
+  version: 2
+
+
+  build_test_deploy-ui:
+    jobs:
+      - check_changes
+      - install_ui_deps:
+          requires:
+            - check_changes
+      - install_bff_deps:
+          requires:
+            - check_changes
+#      - ui-unit-test:
+#          requires:
+#            - check_changes
+#            - install_ui_deps
+#      - bff-unit-test:
+#          requires:
+#            - check_changes
+#            - install_bff_deps
+#      - bff-e2e-test:
+#          requires:
+#            - check_changes
+#            - install_bff_deps
+#      - bff-integration-test:
+#          requires:
+#            - check_changes
+#            - install_bff_deps
+#      - deploy:
+#          stage: dev
+#          context: org_ui
+#          filters:
+#            branches:
+#              only:
+#                - develop
+#          requires:
+#            - install_deps
+#            - integration-test
+#            - unit-test
