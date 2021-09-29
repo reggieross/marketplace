@@ -16,10 +16,14 @@ jobs:
       - run: cat > ~/repo/ci/new-env-vars
       - run: ~/repo/ci/check_for_changes.sh
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
-      - run: git diff --name-only --diff-filter=AMDRT --cached
       - persist_to_workspace:
           root: ~/repo
-          paths: .
+          paths:
+           - ./cf
+           - ./ci
+           - ./serverless.yml
+           - ./package.json
+           - ./package-lock.json
 
   install_module_deps:
     <<: *defaults
@@ -27,6 +31,7 @@ jobs:
       module:
         type: string
     steps:
+      - checkout
       - attach_workspace:
           at: ~/repo
       - node/install-npm
@@ -37,7 +42,7 @@ jobs:
       - run: cd ./<< parameters.module >> && npm install
       - save_cache:
           paths:
-            - node_modules
+            - << parameters.module >>/node_modules
           key: << parameters.module >>-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: ~/repo
@@ -54,16 +59,19 @@ jobs:
       SCRIPT_ROOT: ./ci/<< parameters.module >>/build.sh
     <<: *defaults
     steps:
+      - checkout
       - attach_workspace:
           at: ~/repo
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
-      - run: mkdir  ./<< parameters.module >>/build
+      - run: mkdir ~/repo/<< parameters.module >>/build
       - run: $SCRIPT_ROOT
       - when:
           condition: << parameters.createZip >>
           steps:
             - run: mkdir  ./<< parameters.module >>/artifacts
             - run: zip -r ./<< parameters.module >>/artifacts/<< parameters.module >>.zip  ./<< parameters.module >>/build
+            - store_artifacts:
+                path: ./<< parameters.module >>/artifacts/<< parameters.module >>.zip
       - persist_to_workspace:
           root: ~/repo
           paths:
@@ -78,6 +86,7 @@ jobs:
       SCRIPT_ROOT: ./ci/<< parameters.module >>/unit-test.sh
     <<: *defaults
     steps:
+      - checkout
       - attach_workspace:
           at: ~/repo
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
@@ -91,6 +100,7 @@ jobs:
       SCRIPT_ROOT: ./ci/<< parameters.module >>/e2e-test.sh
     <<: *defaults
     steps:
+      - checkout
       - attach_workspace:
           at: ~/repo
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
@@ -102,8 +112,8 @@ jobs:
       stage:
         default: dev
         type: string
+    <<: *defaults
     steps:
-      - checkout
       - attach_workspace:
           at: ~/repo
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
@@ -119,7 +129,7 @@ jobs:
           name: Get the correct params for deployment and deploy
           command: |
             params=( --stage << parameters.stage >> --aws-profile deployment)
-            [[ $BUILD_BFF == true ]] && params+=(--nos3sync)
+            [[ $BUILD_UI != true ]] && [[ $BUILD_ALL != true ]] && params+=(--nos3sync)
             npx serverless deploy "${params[@]}"
 
 workflows:
@@ -139,32 +149,33 @@ workflows:
           module: ui
           requires:
             - check_changes
+      - unit-test:
+          name: "Test: UI UNIT"
+          module: ui
+          requires:
+            - "Install: UI"
+      - unit-test:
+          name: "Test: BFF UNIT"
+          module: bff
+          requires:
+            - "Install: BFF"
+      - e2e-test:
+          name: "Test: BFF E2E"
+          module: bff
+          requires:
+            - "Install: BFF"
       - build:
           name: "Build: BFF"
           module: bff
           createZip: true
           requires:
-            - "Install: BFF"
+            - "Test: BFF UNIT"
+            - "Test: BFF E2E"
       - build:
           name: "Build: UI"
           module: ui
           requires:
-            - "Install: UI"
-      - unit-test:
-          name: "Test: UI UNIT"
-          module: ui
-          requires:
-            - "Build: UI"
-      - unit-test:
-          name: "Test: BFF UNIT"
-          module: bff
-          requires:
-            - "Build: BFF"
-      - e2e-test:
-          name: "Test: BFF E2E"
-          module: bff
-          requires:
-            - "Build: BFF"
+            - "Test: UI UNIT"
       - deploy:
           stage: dev
           name: "Deploy: DEV"
@@ -174,9 +185,8 @@ workflows:
               only:
                 - develop
           requires:
-            - "Test: BFF UNIT"
-            - "Test: BFF E2E"
-            - "Test: UI UNIT"
+            - "Build: BFF"
+            - "Build: UI"
       - deploy:
           stage: prod
           name: "Deploy: PROD"
@@ -186,9 +196,8 @@ workflows:
               only:
                 - master
           requires:
-            - "Test: BFF UNIT"
-            - "Test: BFF E2E"
-            - "Test: UI UNIT"
+            - "Build: BFF"
+            - "Build: UI"
       - deploy:
           stage: qa
           name: "Deploy: QA"
@@ -198,6 +207,5 @@ workflows:
               only:
                 - release/*
           requires:
-            - "Test: BFF UNIT"
-            - "Test: BFF E2E"
-            - "Test: UI UNIT"
+            - "Build: BFF"
+            - "Build: UI"

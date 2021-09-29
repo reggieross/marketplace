@@ -14,7 +14,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node --max_old_space_size=128 ./build/index.js"
+    "start": "node --max_old_space_size=128 ./build/index.js",
+    "beautify": "prettier --write ./src/**/*.ts"
   },
   "homepage": "https://github.com/reggieross/marketplace-gateway#readme",
   "devDependencies": {
@@ -33,6 +34,9 @@
     "@types/node-fetch": "^2.5.5",
     "apollo-server": "^3.3.0",
     "apollo-server-core": "^3.3.0",
+    "apollo-server-lambda": "^3.3.0",
+    "aws-lambda": "^1.0.6",
+    "aws-serverless-express": "^3.4.0",
     "bottleneck": "^2.19.5",
     "cookie": "^0.4.0",
     "cookie-parser": "^1.4.4",

@@ -29,7 +29,7 @@ functions:
     environment:
       HELLO_WORLD: "YO"
     package:
-      artifact: ./bff/artifacts/bff.zip
+      artifact: bff/artifacts/bff.zip
     events:
       - http:
           method: any
