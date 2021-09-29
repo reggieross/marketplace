@@ -53,4 +53,4 @@ Outputs:
     Export:
       Name: !Sub
         - '#{StackName}-DomainName'
-        - StackName: org-ui-${opt:stage, 'dev'}
+        - StackName: ${self:service}-${opt:stage, 'dev'}

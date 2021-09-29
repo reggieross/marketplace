@@ -47,6 +47,9 @@ jobs:
     parameters:
       module:
         type: string
+      createZip:
+        type: boolean
+        default: false
     environment:
       SCRIPT_ROOT: ./ci/<< parameters.module >>/build.sh
     <<: *defaults
@@ -56,9 +59,16 @@ jobs:
       - run: cat ~/repo/ci/new-env-vars >> $BASH_ENV
       - run: mkdir  ./<< parameters.module >>/build
       - run: $SCRIPT_ROOT
+      - when:
+          condition: << parameters.createZip >>
+          steps:
+            - run: mkdir  ./<< parameters.module >>/artifacts
+            - run: zip -r ./<< parameters.module >>/artifacts/<< parameters.module >>.zip  ./<< parameters.module >>/build
       - persist_to_workspace:
           root: ~/repo
-          paths: ./<< parameters.module >>/build
+          paths:
+            - ./<< parameters.module >>/build
+            - ./<< parameters.module >>/artifacts
 
   unit-test:
     parameters:
@@ -132,6 +142,7 @@ workflows:
       - build:
           name: "Build: BFF"
           module: bff
+          createZip: true
           requires:
             - "Install: BFF"
       - build:

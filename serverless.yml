@@ -5,9 +5,10 @@ plugins:
   - serverless-cloudformation-sub-variables
   - serverless-s3-sync
   - serverless-build-client
+  - serverless-plugin-ifelse
 
 custom:
-  siteName: ${self:service}-ui-${opt:stage}
+  siteName: ${self:service}-app-ui-${opt:stage}
   s3Sync:
     - bucketName: ${self:custom.siteName}
       localDir: ui/build
@@ -15,17 +16,24 @@ custom:
     packager: npm
     command: run build
     verbose: true
+  serverlessIfElse:
+    - ExcludeIf:
+        functions.bff: '!${env:BUILD_ALL, false} && !${env:BUILD_BFF, false}'
+package:
+  individually: true
 
 functions:
   bff:
-    handler: .bff/build/lambda.handler
+    handler: ./bff/build/lambda.handler
     memorySize: 4096
     environment:
       HELLO_WORLD: "YO"
     package:
-      patterns:
-        - ./bff/build/**
-    condition: DeployBFF
+      artifact: ./bff/artifacts/bff.zip
+    events:
+      - http:
+          method: any
+          path: /{any+}
 
 provider:
   name: aws
@@ -41,15 +49,5 @@ provider:
     ServiceName: ${self:service}
 
 resources:
-  - Conditions:
-      BuildAll: !Equals
-        - "${env:BUILD_ALL, false}"
-        - "true"
-      BuildBFF: !Equals
-        - "${env:BUILD_BFF, false}"
-        - "true"
-      DeployBFF: !Or
-        - !Condition BuildAll
-        - !Condition BuildBFF
   - ${file(./cf/s3.yml)}
   - ${file(./cf/cloudfront.yml)}

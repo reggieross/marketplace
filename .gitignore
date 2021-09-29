@@ -6,14 +6,13 @@ bff/node_modules
 node_modules
 /.pnp
 .pnp.js
+.serverless
 /.idea
 
-# testing
-/coverage
-
 # production
-/bff/build
-/ui/build
+/**/build
+/**/artifacts
+/**/coverage
 
 # misc
 .DS_Store
