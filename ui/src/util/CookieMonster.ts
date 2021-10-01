@@ -18,13 +18,16 @@ const deleteCookie = (cookieName: CookieType) => {
   return Cookies.remove(cookieName);
 };
 
-function _parseCookie(cookie: string): object {
-  return cookie.split(';').reduce((acc: object, cookieKeyValue) => {
+function _parseCookie(cookie: string): Record<string, any> {
+  return cookie.split(';').reduce((acc: Record<string, any>, cookieKeyValue) => {
+    const keyPairLen = 2;
+    const keyIndex = 0;
+    const valueIndex = 1;
     const spiltVal = cookieKeyValue.split('=');
-    if (spiltVal.length === 2) {
+    if (spiltVal.length === keyPairLen) {
       return {
         ...acc,
-        [spiltVal[0]]: spiltVal[1],
+        [spiltVal[keyIndex]]: spiltVal[valueIndex],
       };
     }
 

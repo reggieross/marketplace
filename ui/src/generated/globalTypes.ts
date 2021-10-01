@@ -8,9 +8,9 @@
 //==============================================================
 
 export enum LIMIT {
-  FIFTY = "FIFTY",
-  FIVE_HUNDRED = "FIVE_HUNDRED",
-  ONE_HUNDRED = "ONE_HUNDRED",
+  FIFTY = 'FIFTY',
+  FIVE_HUNDRED = 'FIVE_HUNDRED',
+  ONE_HUNDRED = 'ONE_HUNDRED',
 }
 
 export interface PaginationInput {

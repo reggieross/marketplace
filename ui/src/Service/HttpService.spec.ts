@@ -1,5 +1,5 @@
-import fetchMock from 'jest-fetch-mock';
 import { HttpService } from './HttpService';
+import fetchMock from 'jest-fetch-mock';
 
 describe('Http Client', () => {
   describe('Get ', () => {

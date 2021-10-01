@@ -8,18 +8,18 @@
 // ====================================================
 
 export interface fetchFilters_catalog_filters_brand {
-  __typename: "Brand";
+  __typename: 'Brand';
   name: string | null;
   id: string | null;
 }
 
 export interface fetchFilters_catalog_filters {
-  __typename: "ProductFilters";
+  __typename: 'ProductFilters';
   brand: fetchFilters_catalog_filters_brand[];
 }
 
 export interface fetchFilters_catalog {
-  __typename: "ProductResponse";
+  __typename: 'ProductResponse';
   filters: fetchFilters_catalog_filters;
 }
 

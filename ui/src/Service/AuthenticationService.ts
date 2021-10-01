@@ -1,8 +1,7 @@
+import { ENV } from '../env';
 import { HttpService } from './HttpService';
-import {UserInfo} from "./service.types";
-import {ENV} from "../env";
-
-
+import {HttpStatus} from '../../../shared/src/const/HttpStatus';
+import { UserInfo } from './service.types';
 const authServiceURI = ENV.AUTHENTICATION_URL;
 export enum ResponseType {
   SUCCESS,
@@ -29,7 +28,7 @@ const login = async (
     password,
   });
 
-  return res.statusCode === 200
+  return res.statusCode === HttpStatus.COMPLETE
     ? ResponseType.SUCCESS
     : { status: res.statusCode, message: '' };
 };

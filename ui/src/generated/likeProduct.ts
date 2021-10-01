@@ -8,12 +8,12 @@
 // ====================================================
 
 export interface likeProduct_catalog_likeProduct {
-  __typename: "LikeProductResponse";
+  __typename: 'LikeProductResponse';
   success: boolean | null;
 }
 
 export interface likeProduct_catalog {
-  __typename: "CatalogMutationResponse";
+  __typename: 'CatalogMutationResponse';
   likeProduct: likeProduct_catalog_likeProduct | null;
 }
 

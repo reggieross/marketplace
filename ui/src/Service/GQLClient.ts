@@ -1,5 +1,5 @@
 import { ApolloClient, DefaultOptions } from 'apollo-client';
-import { createService, GqlService } from '../generated/serviceFactory';
+import { GqlService, createService } from '../generated/serviceFactory';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createHttpLink } from 'apollo-link-http';
 

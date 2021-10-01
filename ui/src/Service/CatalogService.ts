@@ -1,10 +1,10 @@
 import { Brand, Product } from '../types/dataTypes';
-import { getGQLClient } from './GQLClient';
-import { ProductTransformer } from './transformers/ProductTransformer';
 import { BrandTransformer } from './transformers/BrandTransformer';
-import { PaginationInput } from '../generated/globalTypes';
-import { likeProduct as LikeProductResponse } from '../generated/likeProduct';
 import { FetchResult } from 'apollo-link';
+import { likeProduct as LikeProductResponse } from '../generated/likeProduct';
+import { PaginationInput } from '../generated/globalTypes';
+import { ProductTransformer } from './transformers/ProductTransformer';
+import { getGQLClient } from './GQLClient';
 
 const fetchProducts = async (
   brandIds?: string[],
@@ -43,9 +43,12 @@ const likeProduct = (productId: string, liked: boolean): void => {
             res.data.catalog.likeProduct.success
           )
         ) {
+          return;
         }
       });
-  } catch (e) {}
+  } catch (e) {
+    return;
+  }
 };
 
 const CatalogService = {

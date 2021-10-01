@@ -1,5 +1,6 @@
-import { HttpClient, ResponseEntity } from './client/HttpService';
 import { AuthenticationService } from './AuthenticationService';
+import {HttpClient} from '../../../bff/src/client/HttpClient';
+import {ResponseEntity} from './HttpService';
 
 describe('Authentication Service', () => {
   it('Should return the Auth token from the HttpResponse', async () => {
@@ -9,7 +10,6 @@ describe('Authentication Service', () => {
 
     const mockResponseEntity: ResponseEntity = {
       statusCode: 200,
-      headers: headers,
       responseObj: {},
     };
     const postSpy = jest.spyOn(HttpClient, 'post');
