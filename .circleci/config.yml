@@ -35,15 +35,7 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - node/install-npm
-      - restore_cache:
-          keys:
-            - << parameters.module >>-dependencies-{{ checksum "package.json" }}
-            - << parameters.module >>-dependencies-
       - run: cd ./<< parameters.module >> && npm install
-      - save_cache:
-          paths:
-            - << parameters.module >>/node_modules
-          key: << parameters.module >>-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: ~/repo
           paths: ./<< parameters.module >>/node_modules
