@@ -14,12 +14,12 @@ const setCookie = <T>(cookieName: CookieType, body: string): void => {
   Cookies.set(cookieName, body);
 };
 
-const deleteCookie = (cookieName: CookieType) => {
+const deleteCookie = (cookieName: CookieType): void => {
   return Cookies.remove(cookieName);
 };
 
-function _parseCookie(cookie: string): Record<string, any> {
-  return cookie.split(';').reduce((acc: Record<string, any>, cookieKeyValue) => {
+function _parseCookie(cookie: string): Record<string, string | number | boolean> {
+  return cookie.split(';').reduce((acc: Record<string, string | number | boolean>, cookieKeyValue) => {
     const keyPairLen = 2;
     const keyIndex = 0;
     const valueIndex = 1;

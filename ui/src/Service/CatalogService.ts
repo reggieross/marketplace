@@ -19,7 +19,7 @@ const fetchProducts = async (
   }
 };
 
-const fetchFilters = async (brandIds?: string[]): Promise<Brand[]> => {
+const fetchFilters = async (): Promise<Brand[]> => {
   const service = getGQLClient();
   try {
     const products = await service.fetchFilters({});

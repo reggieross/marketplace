@@ -36,7 +36,7 @@ const login = async (
 const validateToken = async (
   accessToken: string
 ): Promise<ValidateTokenResponse> => {
-  return { isValid: true };
+  return { isValid: !!accessToken };
 };
 
 export const AuthenticationService = {

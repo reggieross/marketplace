@@ -9,7 +9,7 @@ const logPageView = async (): Promise<void> => {
   await analytics.page();
 };
 
-const logClick = async (eventName: string, extraData?: any): Promise<void> => {
+const logClick = async <T>(eventName: string, extraData?: T): Promise<void> => {
   await analytics.track(`${eventName}-click`, extraData);
 };
 

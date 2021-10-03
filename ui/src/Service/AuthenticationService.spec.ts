@@ -1,13 +1,10 @@
-import { AuthenticationService } from './AuthenticationService';
+import {AuthenticationService, ResponseType} from './AuthenticationService';
 import {HttpClient} from '../../../bff/src/client/HttpClient';
 import {ResponseEntity} from './HttpService';
 
 describe('Authentication Service', () => {
   it('Should return the Auth token from the HttpResponse', async () => {
-    const headers = {
-      get: (val: string) => 'access_token=some_token',
-    } as Headers;
-
+    fetchMock.mockResponse(JSON.stringify({'success':true}));
     const mockResponseEntity: ResponseEntity = {
       statusCode: 200,
       responseObj: {},
@@ -20,6 +17,7 @@ describe('Authentication Service', () => {
       'some-password'
     );
 
-    expect(success).toEqual(true);
+
+    expect(success).toEqual(ResponseType.SUCCESS);
   });
 });

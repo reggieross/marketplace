@@ -4,7 +4,7 @@ import fetchMock from 'jest-fetch-mock';
 describe('Http Client', () => {
   describe('Get ', () => {
     it('Should use fetch with the correct props', async () => {
-      fetchMock.mockResolvedValue({ json: jest.fn() } as any);
+      fetchMock.mockResolvedValue({ status: 200, json:  async () => ({ hello: 'world' }) } as Response);
       await HttpService.get('http://www.google.com');
       expect(fetchMock).toBeCalledWith('http://www.google.com', {
         credentials: 'include',
@@ -17,7 +17,7 @@ describe('Http Client', () => {
       fetchMock.mockResolvedValue({
         status: 200,
         json: async () => ({ hello: 'world' }),
-      } as any);
+      } as Response);
       const res = await HttpService.get('http://www.google.com');
       expect(res).toEqual({
         responseObj: {

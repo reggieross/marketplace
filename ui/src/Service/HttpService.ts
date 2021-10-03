@@ -1,11 +1,11 @@
-export interface ResponseEntity {
-  responseObj: any;
+export interface ResponseEntity<T> {
+  responseObj: T;
   statusCode: number;
   message?: string;
 }
 
 export class HttpService {
-  public static async get(url: string): Promise<ResponseEntity> {
+  public static async get<T>(url: string): Promise<ResponseEntity<T>> {
     return fetch(url, {
       method: 'GET',
       credentials: 'include',
@@ -13,11 +13,11 @@ export class HttpService {
         'Content-Type': 'application/json',
       },
     }).then(
-      async (response: Response) => await HttpService.handleResponse(response)
+      async (response: Response) => await HttpService.handleResponse<T>(response)
     );
   }
 
-  public static async post(url: string, body: any): Promise<ResponseEntity> {
+  public static async post<T,U>(url: string, body: T): Promise<ResponseEntity<U>> {
     return fetch(url, {
       method: 'POST',
       headers: {
@@ -25,14 +25,14 @@ export class HttpService {
       },
       body: JSON.stringify(body),
     }).then(
-      async (response: Response) => await HttpService.handleResponse(response)
+      async (response: Response) => await HttpService.handleResponse<U>(response)
     );
   }
 
-  private static async handleResponse(
+  private static async handleResponse<T>(
     response: Response
-  ): Promise<ResponseEntity> {
-    const responseObj = await response.json();
+  ): Promise<ResponseEntity<T>> {
+    const responseObj = await response.json() as T;
     return {
       responseObj,
       statusCode: response.status,
