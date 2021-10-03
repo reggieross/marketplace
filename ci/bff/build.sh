@@ -1,4 +1,4 @@
-if [ "$BUILD_ALL" = "true" ] || [ "$BUILD_BFF" = "true" ]
+if [ "$BUILD_BFF" = "true" ]
 then
 echo "Starting BFF BUILD"
 cd ./bff || exit

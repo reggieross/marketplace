@@ -121,7 +121,7 @@ jobs:
           name: Get the correct params for deployment and deploy
           command: |
             params=( --stage << parameters.stage >> --aws-profile deployment)
-            [[ $BUILD_UI != true ]] && [[ $BUILD_ALL != true ]] && params+=(--nos3sync)
+            [[ $BUILD_UI != true ]] && params+=(--nos3sync)
             npx serverless deploy "${params[@]}"
 
 workflows:

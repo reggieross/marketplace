@@ -18,7 +18,7 @@ custom:
     verbose: true
   serverlessIfElse:
     - ExcludeIf:
-        functions.bff: '!${env:BUILD_ALL, false} && !${env:BUILD_BFF, false}'
+        functions.bff: '!${env:BUILD_BFF, false}'
 package:
   individually: true
 

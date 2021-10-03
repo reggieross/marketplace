@@ -1,5 +1,5 @@
 
-if [ "$BUILD_ALL" = "true" ] || [ "$BUILD_UI" = "true" ]
+if [ "$BUILD_UI" = "true" ]
 then
 echo "Starting UI build"
 cd ./ui || exit
